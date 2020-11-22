@@ -10,25 +10,11 @@ module Dnb
     class Client
       include Dnb::Api::Utils
       def initialize(params)
-        check_params(params)
-
-        @api_key = params[:api_key]
-        @secret = params[:secret]
-        @loglevel = params[:loglevel] || Logger::WARN
-
-        @environment = params[:environment] || :production
-        # Proxy either makes real calls or dummy calls...
-        if @environment == :dummy
-          @proxy = DummyClient.new(params)
-        else
-          @proxy = RealClient.new(params)
-        end
+        @proxy = choose_proxy(params[:environment]).new(params)
       end
 
       def connect
         @proxy.connect
-        @access_token = @proxy.access_token
-        true
       end
 
       def connected?
@@ -45,19 +31,12 @@ module Dnb
 
       private
 
-      def check_params(params)
-        missing = MANDATORY_PARAMS.find_all { |p| params[p].nil? }
-        unexpected = params.reject { |k| EXPECTED_PARAMS.include?(k) }
-        raise(IncorrectParams, "Missing params: #{missing}") unless missing.empty?
-        raise(IncorrectParams, "Unexpected params: #{unexpected}") unless unexpected.empty?
-      end
-
-      def auth_header
-        { 'Authorization' => @access_token }
-      end
-
-      def check_connected
-        raise NotConnected if @access_token.nil?
+      def choose_proxy(environment)
+        if environment == :dummy
+          DummyClient
+        else
+          RealClient
+        end
       end
     end
   end

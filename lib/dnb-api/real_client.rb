@@ -33,9 +33,7 @@ module Dnb
       end
       def criteria_search(params)
         url = build_url(CRITERIA_SEARCH_PATH)
-        puts url
-        puts params
-        puts HEADERS.merge(auth_header)
+        Dnb::Api.logger.debug("Making request for token to #{url}")
         response = Faraday.post do |req|
           req.url url
           req.headers = HEADERS.merge(auth_header)
@@ -47,13 +45,10 @@ module Dnb
 
       def company_profile(duns, report_type)
         url = build_url(COMPANY_PROFILE_PATH, duns, report_type)
-        puts url
-        puts report_type
-        puts HEADERS.merge(auth_header)
+        Dnb::Api.logger.debug("Making request for token to #{url}")
         response = Faraday.get do |req|
           req.url url
           req.headers = HEADERS.merge(auth_header)
-         # req.body = params.to_json
         end
         Dnb::Api.logger.debug("response: #{response}")
         JSON.parse response.body

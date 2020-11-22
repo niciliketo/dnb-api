@@ -2,6 +2,7 @@ require 'minitest/autorun'
 require 'dnb-api'
 require 'vcr'
 module Dnb
+  # Test the real version of the API
   class ApiTest < Minitest::Test
     VCR.configure do |config|
       config.cassette_library_dir = 'test/fixtures/vcr_cassettes'
@@ -14,7 +15,7 @@ module Dnb
 
     def test_initialize_success
       client = Dnb::Api::Client.new(api_key: 'foo', secret: 'bar', environment: :sandbox)
-      assert_equal %i[@api_key @secret @loglevel @environment @proxy],
+      assert_equal %i[@proxy],
                    client.instance_variables
     end
 

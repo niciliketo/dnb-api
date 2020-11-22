@@ -1,0 +1,155 @@
+{
+  "transactionDetail": {
+    "transactionID": "rrt-097c1ff912c8673f5-a-eu-18254-20953278-1",
+    "transactionTimestamp": "2020-11-06T18:22:24.127Z",
+    "inLanguage": "en-US",
+    "serviceVersion": "1"
+  },
+  "inquiryDetail": {
+    "countryISOAlpha2Code": "GB",
+    "searchTerm": "MarketDojo"
+  },
+  "candidatesReturnedQuantity": 1,
+  "candidatesMatchedQuantity": 1,
+  "searchCandidates": [
+    {
+      "displaySequence": 1,
+      "organization": {
+        "duns": "216832106",
+        "dunsControlStatus": {
+          "isOutOfBusiness": false,
+          "isMarketable": false,
+          "isTelephoneDisconnected": false,
+          "isMailUndeliverable": false,
+          "isDelisted": false,
+          "subjectHandlingDetails": [
+            {
+              "description": "SuppressTelephone Number from Marketing Lists",
+              "dnbCode": 2540
+            }
+          ]
+        },
+        "primaryName": "MARKETDOJO LTD",
+        "primaryAddress": {
+          "addressCountry": {
+            "isoAlpha2Code": "GB",
+            "name": "UnitedKingdom"
+          },
+          "addressLocality": {
+            "name": "BRISTOL"
+          },
+          "postalCode": "BS7 8EL",
+          "streetAddress": {
+            "line1": "11Wolseley Road"
+          },
+          "latitude": 51.473532,
+          "longitude": -2.591907
+        },
+        "registeredAddress": {
+          "addressCountry": {
+            "isoAlpha2Code": "GB",
+            "name": "UnitedKingdom"
+          },
+          "addressLocality": {
+            "name": "BRISTOL"
+          },
+          "postalCode": "BS7 8EL",
+          "streetName": "11,WOLSELEY ROAD, BISHOPSTON"
+        },
+        "primaryIndustryCodes": [
+          {
+            "usSicV4": "7379",
+            "usSicV4Description": "Computerrelated services"
+          }
+        ],
+        "corporateLinkage": {
+          "isBranch": false
+        },
+        "financials": [
+          {
+            "yearlyRevenue": [
+              {
+                "value": 2060076.0,
+                "currency": "USD"
+              }
+            ]
+          }
+        ],
+        "registrationNumbers": [
+          {
+            "registrationNumber": "07332766",
+            "typeDescription": "COMPANIESREGISTRY OFFICE Number (GB)",
+            "typeDnBCode": 2541
+          }
+        ],
+        "numberOfEmployees": [
+          {
+            "value": 20,
+            "informationScopeDescription": "Individual",
+            "informationScopeDnBCode": 9066,
+            "reliabilityDescription": "Estimated",
+            "reliabilityDnBCode": 9093
+          }
+        ],
+        "industryCodes": [
+          {
+            "code": "541512",
+            "description": "ComputerSystems Design Services",
+            "typeDescription": "North American Industry ClassificationSystem 2017",
+            "typeDnbCode": 30832,
+            "priority": 2
+          },
+          {
+            "code": "541512",
+            "description": "ComputerSystems Design Services",
+            "typeDescription": "North American Industry ClassificationSystem 2017",
+            "typeDnbCode": 30832,
+            "priority": 1
+          },
+          {
+            "code": "1119",
+            "description": "InformationTechnology Services",
+            "typeDescription": "D&B Hoovers Industry Code",
+            "typeDnbCode": 25838,
+            "priority": 1
+          },
+          {
+            "code": "62090",
+            "description": "Otherinformation technology and computer service activities",
+            "typeDescription": "UKStandard Industry Code 2007",
+            "typeDnbCode": 19295,
+            "priority": 1
+          },
+          {
+            "code": "73790000",
+            "description": "Computerrelated services, nec",
+            "typeDescription": "D&B Standard Industry Code",
+            "typeDnbCode": 3599,
+            "priority": 2
+          },
+          {
+            "code": "73790000",
+            "description": "Computerrelated services, nec",
+            "typeDescription": "D&B Standard Industry Code",
+            "typeDnbCode": 3599,
+            "priority": 1
+          }
+        ],
+        "telephone": [
+          {
+            "telephoneNumber": "1174566817",
+            "isdCode": "44"
+          }
+        ],
+        "businessEntityType": {
+          "dnbCode": 451,
+          "description": "Corporation"
+        },
+        "domain": "marketdojo.com",
+        "isPubliclyTradedCompany": false,
+        "isStandalone": true,
+        "isFortune1000Listed": false
+      }
+    }
+  ]
+}

@@ -27,7 +27,15 @@ result = client.company_profile(<duns>, Dnb::Api::Report.new)
 ## Dummy API
 
 Because obtaining credetials can be time consuming and accessing the API may be costly, there is a dummy mode.
-In dummy mode, calls to the API will return data in the correct format, from a local cache. This is only suitable for development.
+In dummy mode, calls to the API will return data in the correct format, from a local cache. This is only suitable for development. They api_key and secret variables are validated
+
+```ruby
+require 'dnb-api'
+client = Dnb::Api::Client.new(api_key: 'key' , secret: 'secret' )
+client.connect
+result = client.criteria_search(countryISOAlpha2Code: 'GB', searchTerm: 'Dojo')
+
+```
 
 ## Authentication
 

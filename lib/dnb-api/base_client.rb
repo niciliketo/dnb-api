@@ -12,13 +12,18 @@ module Dnb
     class BaseClient
       include Dnb::Api::Utils
       attr_accessor :access_token
+
       def initialize(params)
+        check_params(params)
         @api_auth = Base64.strict_encode64(params[:api_key] + ':' + params[:secret])
         @loglevel = params[:loglevel] || Logger::WARN
 
         @environment = params[:environment] || :production
-      end
 
+        @api_key = params[:api_key]
+        @secret = params[:secret]
+        @access_token = nil
+      end
       private
 
       def check_params(params)

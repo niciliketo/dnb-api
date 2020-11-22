@@ -3,38 +3,41 @@
 require 'faraday'
 require 'json'
 require 'dnb-api/base_client'
-# module Dnb
-#   module Api
-#     ##
-#     # Dummy client returns canned responses and does not
-#     # connect to the dnb api.
-#     class DummyClient < BaseClient
-#       def connect
-#         @_access_token = DUMMY_ACCESS_TOKEN
-#         true
-#       end
+module Dnb
+  module Api
 
-#       def connected?
-#         !@access_token.nil?
-#       end
+    ##
+    # Dummy client returns canned responses and does not
+    # connect to the dnb api.
+    # We do still check that the api_key and secret are correct
+    # So we can simulate fail responses
+    class DummyClient < BaseClient
+      def connect
+        @access_token = DUMMY_ACCESS_TOKEN if @api_key == DUMMY_KEY && @secret == DUMMY_SECRET
+        !@access_token.nil?
+      end
 
-#       def company_search(_params)
-#         check_connected
-#         file = File.read(get_path('company_search_success.json'))
-#         JSON.parse file
-#       end
+      def connected?
+        !@access_token.nil?
+      end
 
-#       def company_credit_report(_connect_id)
-#         check_connected
-#         file = File.read(get_path("company_credit_report_success.json"))
-#         JSON.parse file
-#       end
+      def criteria_search(_params)
+        check_connected
+        file = File.read(get_path('criteria_search.json'))
+        JSON.parse file
+      end
 
-#       private
+      def company_profile(_duns, report_type)
+        check_connected
+        file = File.read(get_path('company_profile.json'))
+        JSON.parse file
+      end
 
-#       def get_path(file)
-#         "#{__dir__}/../../dummy_responses/#{file}"
-#       end
-#     end
-#   end
-# end
+      private
+
+      def get_path(file)
+        "#{__dir__}/../../dummy_responses/#{file}"
+      end
+    end
+  end
+end
