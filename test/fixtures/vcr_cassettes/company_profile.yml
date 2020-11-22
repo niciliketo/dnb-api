@@ -1,0 +1,187 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://plus.dnb.com/v2/token
+    body:
+      encoding: UTF-8
+      string: '{ "grant_type" : "client_credentials" }'
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Authorization:
+      - Basic ZDc5ZTUwNjIwZDI0NGQ0OGExYTNjNTYxYjU0MzU0ODE3M2QxZDE3YTdkYzY0ODIxYmM0ZDYzZjRiYTMxMDc2ZTpkOTY0ZDdlMTkzNzI0NDM4OWVjNjBhYzQ5YzMyMTk1Y2YwMDU0NjY2M2M1NTQ2YjM4ZWVjMWRiZWJjNTY4Mjlh
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - ''
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate, private, s-maxage=0;
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - Deny
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '65'
+      Date:
+      - Fri, 20 Nov 2020 17:56:59 GMT
+      Connection:
+      - keep-alive
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=65
+      - origin; dur=323
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"XXX051bJS958010gzLd554E6Z46P","expiresIn":86400}'
+  recorded_at: Fri, 20 Nov 2020 17:56:59 GMT
+- request:
+    method: get
+    uri: https://plus.dnb.com/v1/data/duns/216832106?customerReference=965347174&orderReason=6332&productId=cmptcs&reportFormat=html&tradeUp=hq&versionId=v1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer XXX051bJS958010gzLd554E6Z46P
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS,  POST
+      Access-Control-Allow-Origin:
+      - ''
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate, private, s-maxage=0;
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Direct-Plus-Product:
+      - Optional[cmptcs]-Optional[v1]
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Status:
+      - success
+      X-Xss-Protection:
+      - 1; mode=block
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Fri, 20 Nov 2020 17:56:59 GMT
+      Content-Length:
+      - '11641'
+      Connection:
+      - keep-alive
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=3
+      - origin; dur=84
+    body:
+      encoding: UTF-8
+      string: '{"transactionDetail":{"transactionID":"rrt-0daa1ee1e57942d41-b-eu-17974-26331000-5_1559","transactionTimestamp":"2020-11-20T17:56:59.292Z","inLanguage":"en-US","productID":"cmptcs","productVersion":"1"},"inquiryDetail":{"productVersion":"v1","orderReason":"6332","productID":"cmptcs","customerReference":"965347174","duns":"216832106","tradeUp":"hq"},"organization":{"duns":"216832106","dunsControlStatus":{"operatingStatus":{"description":"Active","dnbCode":9074},"isMarketable":false,"isMailUndeliverable":false,"isTelephoneDisconnected":false,"isDelisted":false,"subjectHandlingDetails":[{"description":"Suppress
+        Telephone Number from Marketing Lists","dnbCode":2540}],"fullReportDate":"2010-08-03"},"primaryName":"MARKET
+        DOJO LTD","registeredName":"MARKET DOJO LTD","tradeStyleNames":[],"doNotConfuseNames":[],"defaultCurrency":"GBP","telephone":[{"telephoneNumber":"1174566817","isdCode":"44","isUnreachable":false}],"primaryAddress":{"language":{"description":"English","dnbCode":39},"addressCountry":{"name":"United
+        Kingdom","isoAlpha2Code":"GB"},"continentalRegion":{"name":"Europe"},"addressLocality":{"name":"BRISTOL"},"minorTownName":null,"addressRegion":{},"addressCounty":{},"postalCode":"BS7
+        8EL","postalCodePosition":{},"streetNumber":null,"streetName":null,"streetAddress":{"line1":"11
+        Wolseley Road","line2":null},"postOfficeBox":{},"latitude":51.473532,"longitude":-2.591907,"geographicalPrecision":{"description":"Street
+        Address Centroid","dnbCode":30257},"isRegisteredAddress":null,"locationOwnership":{},"congressionalDistricts":[],"isResidentialAddress":null},"stockExchanges":[],"businessTrading":[],"registrationNumbers":[{"registrationNumber":"07332766","typeDescription":"COMPANIES
+        REGISTRY OFFICE Number (GB)","typeDnBCode":2541}],"industryCodes":[{"code":"541512","description":"Computer
+        Systems Design Services","typeDescription":"North American Industry Classification
+        System 2017","typeDnBCode":30832,"priority":1},{"code":"541512","description":"Computer
+        Systems Design Services","typeDescription":"North American Industry Classification
+        System 2017","typeDnBCode":30832,"priority":2},{"code":"73790000","description":"Computer
+        related services, nec","typeDescription":"D&B Standard Industry Code","typeDnBCode":3599,"priority":1},{"code":"73790000","description":"Computer
+        related services, nec","typeDescription":"D&B Standard Industry Code","typeDnBCode":3599,"priority":2},{"code":"6203","description":"Computer
+        facilities management activities","typeDescription":"NACE Revision 2","typeDnBCode":29104,"priority":1},{"code":"6203","description":"Computer
+        facilities management activities","typeDescription":"NACE Revision 2","typeDnBCode":29104,"priority":2},{"code":"7379","description":"Computer
+        related services","typeDescription":"US Standard Industry Code 1987 - 4 digit","typeDnBCode":399,"priority":1},{"code":"7379","description":"Computer
+        related services","typeDescription":"US Standard Industry Code 1987 - 4 digit","typeDnBCode":399,"priority":2},{"code":"1119","description":"Information
+        Technology Services","typeDescription":"D&B Hoovers Industry Code","typeDnBCode":25838,"priority":1},{"code":"1119","description":"Information
+        Technology Services","typeDescription":"D&B Hoovers Industry Code","typeDnBCode":25838,"priority":2},{"code":"62090","description":"Other
+        information technology and computer service activities","typeDescription":"UK
+        Standard Industry Code 2007","typeDnBCode":19295,"priority":1},{"code":"7379","description":"Computer
+        related services","typeDescription":"US Standard Industry Code 1972 - 4 digit
+        (European version)","typeDnBCode":1016,"priority":1},{"code":"62090","description":"Other
+        information technology and computer service activities","typeDescription":"UK
+        Standard Industry Code 2007","typeDnBCode":19295,"priority":2},{"code":"I","description":"Services","typeDescription":"D&B
+        Standard Major Industry Code","typeDnBCode":24657,"priority":1}],"startDate":"2010-01-01","incorporatedDate":"2010-08-02","legalForm":{"description":"Private
+        Limited Company","dnbCode":31148,"startDate":"2010-08-02","registrationLocation":{"addressRegion":"1"}},"controlOwnershipDate":null,"controlOwnershipType":{"description":"Privately
+        owned","dnbCode":9058},"charterType":{},"numberOfEmployees":[{"value":20,"minimumValue":null,"maximumValue":null,"informationScopeDescription":"Individual","informationScopeDnBCode":9066,"reliabilityDescription":"Estimated","reliabilityDnBCode":9093}],"latestFinancialStatementDate":null,"latestFinancials":{"financialStatementToDate":"2019-08-31","financialStatementFromDate":null,"financialStatementDuration":"P1Y","informationScope":{"description":"Individual","dnbCode":9066},"reliability":{"description":"Actual","dnbCode":9092},"isFiscal":true,"isAudited":null,"isFinal":null,"isForecasted":null,"isOpening":null,"isProforma":null,"isSigned":true,"isQualified":null,"isRestated":null,"isTrialBalance":null,"isUnbalanced":null,"currency":"GBP","units":"SingleUnits","accountantName":"Bibstone
+        Ltd","overview":{"accountsReceivable":null,"cashAndLiquidAssets":null,"inventory":null,"totalCurrentAssets":1158158,"fixedAssets":494336,"totalLongTermAssets":494336,"intangibleAssets":null,"totalAssets":1652494,"accountsPayable":null,"totalCurrentLiabilities":594079,"longTermDebt":null,"totalLongTermLiabilities":null,"totalLiabilities":594079,"retainedEarnings":0,"tangibleNetWorth":1058415,"totalLiabilitiesEquity":1652494,"salesRevenue":null,"costOfSales":null,"workingCapital":564079,"dividends":null,"grossProfit":null,"profitBeforeTaxes":null,"operatingProfit":null,"netWorth":1058415,"netIncome":null,"netAssets":1058415,"currentRatio":1.9,"acidTestRatio":1.9,"totalIndebtedness":594079,"currentLiabilitiesOverNetWorth":56.1,"totalLiabilitiesOverNetWorth":56.1,"quickRatio":null},"financialRatios":{"statementItems":[{"value":594079,"relativeIndustryRank":null,"itemKey":{"description":"Total
+        Indebtedness","dnbCode":6363}},{"value":56.1,"relativeIndustryRank":null,"itemKey":{"description":"Current
+        Liabilities Over Net Worth","dnbCode":6361}},{"value":56.1,"relativeIndustryRank":null,"itemKey":{"description":"Total
+        Liabilities Over Net Worth","dnbCode":6358}},{"value":1.9,"relativeIndustryRank":null,"itemKey":{"description":"Current
+        Ratio","dnbCode":6357}},{"value":1.9,"relativeIndustryRank":null,"itemKey":{"description":"Acid
+        Test","dnbCode":11908}},{"value":52.9,"relativeIndustryRank":null,"itemKey":{"description":"Capital
+        Per Employee","dnbCode":11918}}]}},"mostSeniorPrincipals":[{"subjectType":"Individuals","birthDate":"1974-05","givenName":"Alun","middleName":null,"familyName":"Rafique","fullName":"Alun
+        Rafique","namePrefix":"MR","nameSuffix":null,"identificationNumber":"15310319","nationality":{"isoAlpha2Code":null,"name":"British"},"gender":{"description":"Male","dnbCode":190},"primaryAddress":{"addressCountry":{},"continentalRegion":{},"addressLocality":{"name":"Cirencester"},"minorTownName":null,"addressRegion":{},"addressCounty":{"name":"Gloucestershire"},"postalCode":"GL7
+        2HU","postalCodePosition":{},"streetNumber":null,"streetName":null,"streetAddress":{"line1":"7
+        Cheltenham Road","line2":null},"postOfficeBox":{}},"responsibleAreas":{},"jobTitles":[{"title":"Director"}],"managementResponsibilities":[{"description":"Director","mrcCode":"Z699"}]}],"isStandalone":true,"corporateLinkage":{},"legalEvents":{"hasLegalEvents":false,"hasOpenLegalEvents":false,"hasSuits":false,"hasOpenSuits":false,"hasLiens":false,"hasOpenLiens":false,"hasBankruptcy":false,"hasOpenBankruptcy":false,"hasJudgments":false,"hasOpenJudgments":false,"hasFinancialEmbarrassment":false,"hasOpenFinancialEmbarrassment":false,"hasCriminalProceedings":false,"hasOpenCriminalProceedings":false,"hasClaims":false,"hasOpenClaims":false,"hasDebarments":false,"hasOpenDebarments":false,"hasInsolvency":false,"hasLiquidation":null,"hasSuspensionOfPayments":false,"hasOtherLegalEvents":false,"judgments":{"mostRecentFilingDate":null,"periodSummary":{"12Months":{"totalCount":0,"totalAmount":{}}}},"bankruptcy":{"mostRecentFilingDate":null,"periodSummary":{"12Months":{"totalCount":0,"totalAmount":{}}}},"suits":{"mostRecentFilingDate":null,"periodSummary":{"12Months":{"totalCount":0,"totalAmount":{}}}},"liens":{"mostRecentFilingDate":null,"periodSummary":{"12Months":{"totalCount":0,"totalAmount":{}}}},"debarments":{},"insolvency":{}},"financingEvents":{"hasFinancingEvents":false,"hasOpenFinancingEvents":false,"hasSecuredFilings":false,"hasOpenSecuredFilings":false,"hasLetterOfLiability":false,"hasOpenLetterOfLiability":false,"financingStatementFilings":{"mostRecentFilingDate":null,"periodSummary":{"12Months":{"totalCount":0,"totalAmount":{}}}},"mortgagesAndCharges":{"mostRecentFilingDate":null,"periodSummary":{"120Months":{"totalCount":0}}}},"significantEvents":{"hasSignificantEvents":true,"hasOperationalEvents":false,"hasDisastrousEvents":false},"dnbAssessment":{"standardRating":{"scoreDate":"2020-08-06","rating":"1A1","riskSegment":"1","financialStrength":"1A","ratingReason":[{"description":"Demographic
+        information indicates low risk","dnbCode":27645},{"description":"There are
+        few or no negative events associated with principals","dnbCode":15824},{"description":"There
+        have been no insolvency events associated to this company","dnbCode":34144},{"description":"There
+        are no mortgages or debentures associated with this company","dnbCode":34177},{"description":"The
+        total liabilites to net worth ratio of the company is strong","dnbCode":34170},{"description":"There
+        are no outstanding Judgments or Scottish Decrees associated with this company","dnbCode":34138}],"ratingOverrideReasons":[]},"creditLimitRecommendation":{"assessmentDate":"2020-08-06","maximumRecommendedLimit":{"value":76000.0,"currency":"GBP"},"averageRecommendedLimit":{},"comment":{}},"delinquencyScore":{"scoreModel":{"description":"GB1630","dnbCode":null},"scoreDate":"2020-08-06","rawScore":437.0,"classScore":null,"classScoreDescription":null,"nationalPercentile":20.0,"riskIncidencePercentage":9.97,"scoreCommentary":[{"description":"Demographic
+        information indicates low risk","dnbCode":27645},{"description":"There are
+        few or no negative events associated with principals","dnbCode":15824},{"description":"There
+        have been no insolvency events associated to this company","dnbCode":34144},{"description":"There
+        are no mortgages or debentures associated with this company","dnbCode":34177},{"description":"The
+        total liabilites to net worth ratio of the company is strong","dnbCode":34170},{"description":"There
+        are no outstanding Judgments or Scottish Decrees associated with this company","dnbCode":34138}],"scoreOverrideReasons":[]},"failureScore":{"scoreModel":{"description":"GB34134","dnbCode":null},"scoreDate":"2020-08-06","rawScore":1573.0,"classScore":null,"classScoreDescription":null,"nationalPercentile":98.0,"riskIncidencePercentage":0.05,"scoreCommentary":[{"description":"Demographic
+        information indicates low risk","dnbCode":27645},{"description":"There are
+        few or no negative events associated with principals","dnbCode":15824},{"description":"There
+        have been no insolvency events associated to this company","dnbCode":34144},{"description":"There
+        are no mortgages or debentures associated with this company","dnbCode":34177},{"description":"The
+        total liabilites to net worth ratio of the company is strong","dnbCode":34170},{"description":"There
+        are no outstanding Judgments or Scottish Decrees associated with this company","dnbCode":34138}],"scoreOverrideReasons":[]},"viabilityRating":{},"historyRating":{},"hasSevereNegativeEvents":false,"overallRiskAssessment":{"description":"Low-Moderate","dnbCode":13694}}}}'
+  recorded_at: Fri, 20 Nov 2020 17:56:59 GMT
+recorded_with: VCR 6.0.0

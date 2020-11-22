@@ -36,7 +36,6 @@ module Dnb
         puts url
         puts params
         puts HEADERS.merge(auth_header)
-        #response = Faraday.post(url, params, auth_header)
         response = Faraday.post do |req|
           req.url url
           req.headers = HEADERS.merge(auth_header)
@@ -46,12 +45,26 @@ module Dnb
         JSON.parse response.body
       end
 
-      def company_credit_report(connect_id)
-        url = build_url(COMPANY_SEARCH_PATH, connect_id)
-        response = Faraday.get(url, {}, auth_header)
-        Dnb::Api.logger.debug("Response received: #{response}")
+      def company_profile(duns, report_type)
+        url = build_url(COMPANY_PROFILE_PATH, duns, report_type)
+        puts url
+        puts report_type
+        puts HEADERS.merge(auth_header)
+        response = Faraday.get do |req|
+          req.url url
+          req.headers = HEADERS.merge(auth_header)
+         # req.body = params.to_json
+        end
+        Dnb::Api.logger.debug("response: #{response}")
         JSON.parse response.body
       end
+
+      # def company_credit_report(connect_id)
+      #   url = build_url(COMPANY_SEARCH_PATH, connect_id)
+      #   response = Faraday.get(url, {}, auth_header)
+      #   Dnb::Api.logger.debug("Response received: #{response}")
+      #   JSON.parse response.body
+      # end
     end
   end
 end

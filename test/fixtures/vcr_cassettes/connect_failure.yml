@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://plus.dnb.com/v2/token
+    body:
+      encoding: UTF-8
+      string: '{ "grant_type" : "client_credentials" }'
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Authorization:
+      - Basic a2V5OnNlY3JldA==
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - ''
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate, private, s-maxage=0;
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - Deny
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '354'
+      Date:
+      - Fri, 06 Nov 2020 18:32:29 GMT
+      Connection:
+      - close
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=2
+      - origin; dur=60
+    body:
+      encoding: UTF-8
+      string: '{"transactionDetail":{"transactionID":"rrt-097c1ff912c8673f5-a-eu-18254-20955681-2","transactionTimestamp":"2020-11-06T18:32:29.386Z","inLanguage":"en-US","productID":"TOKEN_GEN","productVersion":"2.0"},"error":{"errorMessage":"You
+        are not currently authorised to access this product. Please contact your D&B
+        account representative","errorCode":"00041"}}'
+  recorded_at: Fri, 06 Nov 2020 18:32:29 GMT
+recorded_with: VCR 6.0.0

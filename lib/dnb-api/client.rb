@@ -39,8 +39,8 @@ module Dnb
         @proxy.criteria_search(params)
       end
 
-      def company_credit_report(connect_id)
-        @proxy.company_credit_report(connect_id)
+      def company_profile(duns, report_type)
+        @proxy.company_profile(duns, report_type)
       end
 
       private

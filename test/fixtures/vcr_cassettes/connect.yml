@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://plus.dnb.com/v2/token
+    body:
+      encoding: UTF-8
+      string: '{ "grant_type" : "client_credentials" }'
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Authorization:
+      - Basic XXXXZTUwNjIwZDI0NGQ0OGExYTNjNTYxYjU0MzU0ODE3M2QxZDE3YTdkYzY0ODIxYmM0ZDYzZjRiYTMxMDc2ZTpkOTY0ZDdlMTkzNzI0NDM4OWVjNjBhYzQ5YzMyMTk1Y2YwMDU0NjY2M2M1NTQ2YjM4ZWVjMWRiZWJjNTY4Mjlh
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - ''
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate, private, s-maxage=0;
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - Deny
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '65'
+      Date:
+      - Fri, 06 Nov 2020 17:58:47 GMT
+      Connection:
+      - keep-alive
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=1
+      - origin; dur=265
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"XXXXQf48405a2041bJL7N618G59Y","expiresIn":86400}'
+  recorded_at: Fri, 06 Nov 2020 17:58:47 GMT
+recorded_with: VCR 6.0.0

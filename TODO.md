@@ -1,6 +1,7 @@
 TOODO
-1. Add finding an entity
-2. Add specs
-3. remove commented code
-4.
-5.
+- [X] Add finding an entity
+- [X] Add specs
+- [ ] remove commented code
+- [ ] Sort out Dnb::Api::Report.new
+- [ ] Add a dummy
+- [ ] Integrate with MD
