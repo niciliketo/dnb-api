@@ -20,5 +20,26 @@ module Dnb
         super
       end
     end
+
+    # Error class for Invalid Order Reason
+    class InvalidOrderReason < StandardError
+      def initialize(msg = 'The order reason is not valid.')
+        super
+      end
+    end
+
+    # Error class for Invalid Product
+    class InvalidProduct < StandardError
+      def initialize(msg = 'The product is not valid.')
+        super
+      end
+    end
+
+    # Error class for Invalid Product Component
+    class InvalidProductComponents < StandardError
+      def initialize(msg = 'The product compent(s) are not valid.')
+        super
+      end
+    end
   end
 end

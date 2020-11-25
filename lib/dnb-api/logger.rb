@@ -10,11 +10,11 @@ module Dnb
   module Api
     class << self
       def logger
-        @@logger ||= defined?(Rails.logger) ? Rails.logger : Logger.new($stdout)
+        @logger ||= defined?(Rails.logger) ? Rails.logger : Logger.new($stdout)
       end
 
       def logger=(logger)
-        @@logger = logger
+        @logger = logger
       end
     end
   end

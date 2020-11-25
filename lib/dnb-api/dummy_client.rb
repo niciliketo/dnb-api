@@ -5,7 +5,6 @@ require 'json'
 require 'dnb-api/base_client'
 module Dnb
   module Api
-
     ##
     # Dummy client returns canned responses and does not
     # connect to the dnb api.
