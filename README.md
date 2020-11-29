@@ -64,6 +64,19 @@ result = client.company_profile(<duns>, Dnb::Api::ReportType.new)
 
 Report types allow you to define the results which will be returned from D&B.
 
+```ruby
+rt = Dnb::Api::ReportType.new
+product = :'Data Blocks'
+product_components = ['Business Activity Insights', 'Derived Trade Insights']
+rt.product = product
+rt.product_components = product_components
+rt.order_reason = :'Credit Decision'
+rt.customer_reference = '12345'
+
+result = client.company_profile(<duns>, rt)
+
+```
+
 ### Using a string
 If you prefer you can just pass a string to the company_profile method instead of a report type:
 

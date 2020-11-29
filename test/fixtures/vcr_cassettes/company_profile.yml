@@ -64,7 +64,7 @@ http_interactions:
   recorded_at: Fri, 20 Nov 2020 17:56:59 GMT
 - request:
     method: get
-    uri: https://plus.dnb.com/v1/data/duns/216832106?customerReference=965347174&orderReason=6332&productId=cmptcs&reportFormat=html&tradeUp=hq&versionId=v1
+    uri: https://plus.dnb.com/v1/data/duns/216832106?customerReference=12345&orderReason=6332&productId=cmptcs&reportFormat=html&tradeUp=hq&versionId=v1
     body:
       encoding: US-ASCII
       string: ''
@@ -126,7 +126,7 @@ http_interactions:
       - origin; dur=84
     body:
       encoding: UTF-8
-      string: '{"transactionDetail":{"transactionID":"rrt-0daa1ee1e57942d41-b-eu-17974-26331000-5_1559","transactionTimestamp":"2020-11-20T17:56:59.292Z","inLanguage":"en-US","productID":"cmptcs","productVersion":"1"},"inquiryDetail":{"productVersion":"v1","orderReason":"6332","productID":"cmptcs","customerReference":"965347174","duns":"216832106","tradeUp":"hq"},"organization":{"duns":"216832106","dunsControlStatus":{"operatingStatus":{"description":"Active","dnbCode":9074},"isMarketable":false,"isMailUndeliverable":false,"isTelephoneDisconnected":false,"isDelisted":false,"subjectHandlingDetails":[{"description":"Suppress
+      string: '{"transactionDetail":{"transactionID":"rrt-0daa1ee1e57942d41-b-eu-17974-26331000-5_1559","transactionTimestamp":"2020-11-20T17:56:59.292Z","inLanguage":"en-US","productID":"cmptcs","productVersion":"1"},"inquiryDetail":{"productVersion":"v1","orderReason":"6332","productID":"cmptcs","customerReference":"12345","duns":"216832106","tradeUp":"hq"},"organization":{"duns":"216832106","dunsControlStatus":{"operatingStatus":{"description":"Active","dnbCode":9074},"isMarketable":false,"isMailUndeliverable":false,"isTelephoneDisconnected":false,"isDelisted":false,"subjectHandlingDetails":[{"description":"Suppress
         Telephone Number from Marketing Lists","dnbCode":2540}],"fullReportDate":"2010-08-03"},"primaryName":"MARKET
         DOJO LTD","registeredName":"MARKET DOJO LTD","tradeStyleNames":[],"doNotConfuseNames":[],"defaultCurrency":"GBP","telephone":[{"telephoneNumber":"1174566817","isdCode":"44","isUnreachable":false}],"primaryAddress":{"language":{"description":"English","dnbCode":39},"addressCountry":{"name":"United
         Kingdom","isoAlpha2Code":"GB"},"continentalRegion":{"name":"Europe"},"addressLocality":{"name":"BRISTOL"},"minorTownName":null,"addressRegion":{},"addressCounty":{},"postalCode":"BS7

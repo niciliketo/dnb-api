@@ -37,7 +37,28 @@ module Dnb
 
     # Error class for Invalid Product Component
     class InvalidProductComponents < StandardError
-      def initialize(msg = 'The product compent(s) are not valid.')
+      def initialize(msg = 'The product component(s) are not valid.')
+        super
+      end
+    end
+
+    # Error class for Invalid Product Component
+    class InvalidProductSubComponent < StandardError
+      def initialize(msg = 'The product sub component is not valid.')
+        super
+      end
+    end
+
+    # Error class for Invalid Product Component
+    class InvalidReportType < StandardError
+      def initialize(msg = 'The report type is not valid. Please ensure mandatory attributes are set.')
+        super
+      end
+    end
+
+    # Error class for Invalid Product Component
+    class ReportTypeNotImplemented < StandardError
+      def initialize(msg = 'Sorry. The report type is not yet implemented. Provide or implement this report type.')
         super
       end
     end

@@ -62,9 +62,10 @@ module Dnb
 
     def test_company_profile_response
       VCR.use_cassette('company_profile') do
+        rt = 'productId=cmptcs&versionId=v1&tradeUp=hq&customerReference=12345&orderReason=6332&reportFormat=html'
         client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :production)
         client.connect
-        result = client.company_profile('216832106', Dnb::Api::ReportType.new)
+        result = client.company_profile('216832106', rt)
 
         assert_equal '07332766', result['organization']['registrationNumbers'][0]['registrationNumber']
       end
