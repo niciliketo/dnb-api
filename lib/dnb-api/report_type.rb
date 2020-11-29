@@ -25,7 +25,7 @@ module Dnb
                           'Financial Strength Insights', 'Payment Insights', 'Third-Party Risk Insights'],
           'Data Products': ['Analytics', 'Company Profile', 'Corporate Linkage, Family Tree',
                             'Resolved Network Insights'],
-          'Company Report': %w[pdf html txt]
+          'Company Report': %w[PDF HTML TXT]
         }.freeze
 
       PRODUCT_COMPONENT_CODES =
@@ -167,7 +167,7 @@ module Dnb
       def company_report_to_s
         #TODO: birstd and comprh are available
         #TODO: languages are available
-        "productId=comprh&inLanguage=en-US&reportFormat=#{product_components}"
+        "productId=birstd&inLanguage=en-US&reportFormat=#{product_components.first}"
       end
 
       def general_info_to_s

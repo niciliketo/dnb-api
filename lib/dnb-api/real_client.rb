@@ -53,13 +53,6 @@ module Dnb
         Dnb::Api.logger.debug("response: #{response}")
         JSON.parse response.body
       end
-
-      # def company_credit_report(connect_id)
-      #   url = build_url(COMPANY_SEARCH_PATH, connect_id)
-      #   response = Faraday.get(url, {}, auth_header)
-      #   Dnb::Api.logger.debug("Response received: #{response}")
-      #   JSON.parse response.body
-      # end
     end
   end
 end

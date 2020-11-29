@@ -1,14 +1,14 @@
 {
   "transactionDetail": {
-    "transactionID": "rrt-0daa1ee1e57942d41-b-eu-17974-26331000-5_1559",
-    "transactionTimestamp": "2020-11-20T17:56:59.292Z",
+    "transactionID": "rrt-0cba0815aed77662f-c-eu-18146-33068730-5_1559",
+    "transactionTimestamp": "2020-11-29T16:37:21.227Z",
     "inLanguage": "en-US",
     "productID": "cmptcs",
     "productVersion": "1"
   },
   "inquiryDetail": {
     "productVersion": "v1",
-    "orderReason": "6332",
+    "orderReason": "Credit Decision",
     "productID": "cmptcs",
     "customerReference": "965347174",
     "duns": "216832106",
@@ -27,13 +27,13 @@
       "isDelisted": false,
       "subjectHandlingDetails": [
         {
-          "description": "SuppressTelephone Number from Marketing Lists",
+          "description": "Suppress Telephone Number from Marketing Lists",
           "dnbCode": 2540
         }
       ],
       "fullReportDate": "2010-08-03"
     },
-    "primaryName": "MARKETDOJO LTD",
+    "primaryName": "MARKET DOJO LTD",
     "registeredName": "MARKET DOJO LTD",
     "tradeStyleNames": [],
     "doNotConfuseNames": [],
@@ -51,7 +51,7 @@
         "dnbCode": 39
       },
       "addressCountry": {
-        "name": "UnitedKingdom",
+        "name": "United Kingdom",
         "isoAlpha2Code": "GB"
       },
       "continentalRegion": {
@@ -63,19 +63,19 @@
       "minorTownName": null,
       "addressRegion": {},
       "addressCounty": {},
-      "postalCode": "BS78EL",
+      "postalCode": "BS7 8EL",
       "postalCodePosition": {},
       "streetNumber": null,
       "streetName": null,
       "streetAddress": {
-        "line1": "11Wolseley Road",
+        "line1": "11 Wolseley Road",
         "line2": null
       },
       "postOfficeBox": {},
       "latitude": 51.473532,
       "longitude": -2.591907,
       "geographicalPrecision": {
-        "description": "StreetAddress Centroid",
+        "description": "Street Address Centroid",
         "dnbCode": 30257
       },
       "isRegisteredAddress": null,
@@ -88,106 +88,106 @@
     "registrationNumbers": [
       {
         "registrationNumber": "07332766",
-        "typeDescription": "COMPANIESREGISTRY OFFICE Number (GB)",
+        "typeDescription": "COMPANIES REGISTRY OFFICE Number (GB)",
         "typeDnBCode": 2541
       }
     ],
     "industryCodes": [
       {
         "code": "541512",
-        "description": "ComputerSystems Design Services",
-        "typeDescription": "North American Industry ClassificationSystem 2017",
+        "description": "Computer Systems Design Services",
+        "typeDescription": "North American Industry Classification System 2017",
         "typeDnBCode": 30832,
         "priority": 1
       },
       {
         "code": "541512",
-        "description": "ComputerSystems Design Services",
-        "typeDescription": "North American Industry ClassificationSystem 2017",
+        "description": "Computer Systems Design Services",
+        "typeDescription": "North American Industry Classification System 2017",
         "typeDnBCode": 30832,
         "priority": 2
       },
       {
         "code": "73790000",
-        "description": "Computerrelated services, nec",
+        "description": "Computer related services, nec",
         "typeDescription": "D&B Standard Industry Code",
         "typeDnBCode": 3599,
         "priority": 1
       },
       {
         "code": "73790000",
-        "description": "Computerrelated services, nec",
+        "description": "Computer related services, nec",
         "typeDescription": "D&B Standard Industry Code",
         "typeDnBCode": 3599,
         "priority": 2
       },
       {
         "code": "6203",
-        "description": "Computerfacilities management activities",
+        "description": "Computer facilities management activities",
         "typeDescription": "NACE Revision 2",
         "typeDnBCode": 29104,
         "priority": 1
       },
       {
         "code": "6203",
-        "description": "Computerfacilities management activities",
+        "description": "Computer facilities management activities",
         "typeDescription": "NACE Revision 2",
         "typeDnBCode": 29104,
         "priority": 2
       },
       {
         "code": "7379",
-        "description": "Computerrelated services",
+        "description": "Computer related services",
         "typeDescription": "US Standard Industry Code 1987 - 4 digit",
         "typeDnBCode": 399,
         "priority": 1
       },
       {
         "code": "7379",
-        "description": "Computerrelated services",
+        "description": "Computer related services",
         "typeDescription": "US Standard Industry Code 1987 - 4 digit",
         "typeDnBCode": 399,
         "priority": 2
       },
       {
         "code": "1119",
-        "description": "InformationTechnology Services",
+        "description": "Information Technology Services",
         "typeDescription": "D&B Hoovers Industry Code",
         "typeDnBCode": 25838,
         "priority": 1
       },
       {
         "code": "1119",
-        "description": "InformationTechnology Services",
+        "description": "Information Technology Services",
         "typeDescription": "D&B Hoovers Industry Code",
         "typeDnBCode": 25838,
         "priority": 2
       },
       {
         "code": "62090",
-        "description": "Otherinformation technology and computer service activities",
-        "typeDescription": "UKStandard Industry Code 2007",
+        "description": "Other information technology and computer service activities",
+        "typeDescription": "UK Standard Industry Code 2007",
         "typeDnBCode": 19295,
         "priority": 1
       },
       {
         "code": "7379",
-        "description": "Computerrelated services",
-        "typeDescription": "US Standard Industry Code 1972 - 4 digit(European version)",
+        "description": "Computer related services",
+        "typeDescription": "US Standard Industry Code 1972 - 4 digit (European version)",
         "typeDnBCode": 1016,
         "priority": 1
       },
       {
         "code": "62090",
-        "description": "Otherinformation technology and computer service activities",
-        "typeDescription": "UKStandard Industry Code 2007",
+        "description": "Other information technology and computer service activities",
+        "typeDescription": "UK Standard Industry Code 2007",
         "typeDnBCode": 19295,
         "priority": 2
       },
       {
         "code": "I",
         "description": "Services",
-        "typeDescription": "D&BStandard Major Industry Code",
+        "typeDescription": "D&B Standard Major Industry Code",
         "typeDnBCode": 24657,
         "priority": 1
       }
@@ -195,7 +195,7 @@
     "startDate": "2010-01-01",
     "incorporatedDate": "2010-08-02",
     "legalForm": {
-      "description": "PrivateLimited Company",
+      "description": "Private Limited Company",
       "dnbCode": 31148,
       "startDate": "2010-08-02",
       "registrationLocation": {
@@ -204,7 +204,7 @@
     },
     "controlOwnershipDate": null,
     "controlOwnershipType": {
-      "description": "Privatelyowned",
+      "description": "Privately owned",
       "dnbCode": 9058
     },
     "charterType": {},
@@ -245,7 +245,7 @@
       "isUnbalanced": null,
       "currency": "GBP",
       "units": "SingleUnits",
-      "accountantName": "BibstoneLtd",
+      "accountantName": "Bibstone Ltd",
       "overview": {
         "accountsReceivable": null,
         "cashAndLiquidAssets": null,
@@ -286,7 +286,7 @@
             "value": 594079,
             "relativeIndustryRank": null,
             "itemKey": {
-              "description": "TotalIndebtedness",
+              "description": "Total Indebtedness",
               "dnbCode": 6363
             }
           },
@@ -294,7 +294,7 @@
             "value": 56.1,
             "relativeIndustryRank": null,
             "itemKey": {
-              "description": "CurrentLiabilities Over Net Worth",
+              "description": "Current Liabilities Over Net Worth",
               "dnbCode": 6361
             }
           },
@@ -302,7 +302,7 @@
             "value": 56.1,
             "relativeIndustryRank": null,
             "itemKey": {
-              "description": "TotalLiabilities Over Net Worth",
+              "description": "Total Liabilities Over Net Worth",
               "dnbCode": 6358
             }
           },
@@ -310,7 +310,7 @@
             "value": 1.9,
             "relativeIndustryRank": null,
             "itemKey": {
-              "description": "CurrentRatio",
+              "description": "Current Ratio",
               "dnbCode": 6357
             }
           },
@@ -318,7 +318,7 @@
             "value": 1.9,
             "relativeIndustryRank": null,
             "itemKey": {
-              "description": "AcidTest",
+              "description": "Acid Test",
               "dnbCode": 11908
             }
           },
@@ -326,7 +326,7 @@
             "value": 52.9,
             "relativeIndustryRank": null,
             "itemKey": {
-              "description": "CapitalPer Employee",
+              "description": "Capital Per Employee",
               "dnbCode": 11918
             }
           }
@@ -340,7 +340,7 @@
         "givenName": "Alun",
         "middleName": null,
         "familyName": "Rafique",
-        "fullName": "AlunRafique",
+        "fullName": "Alun Rafique",
         "namePrefix": "MR",
         "nameSuffix": null,
         "identificationNumber": "15310319",
@@ -363,12 +363,12 @@
           "addressCounty": {
             "name": "Gloucestershire"
           },
-          "postalCode": "GL72HU",
+          "postalCode": "GL7 2HU",
           "postalCodePosition": {},
           "streetNumber": null,
           "streetName": null,
           "streetAddress": {
-            "line1": "7Cheltenham Road",
+            "line1": "7 Cheltenham Road",
             "line2": null
           },
           "postOfficeBox": {}
@@ -489,27 +489,27 @@
         "financialStrength": "1A",
         "ratingReason": [
           {
-            "description": "Demographicinformation indicates low risk",
+            "description": "Demographic information indicates low risk",
             "dnbCode": 27645
           },
           {
-            "description": "There arefew or no negative events associated with principals",
+            "description": "There are few or no negative events associated with principals",
             "dnbCode": 15824
           },
           {
-            "description": "Therehave been no insolvency events associated to this company",
+            "description": "There have been no insolvency events associated to this company",
             "dnbCode": 34144
           },
           {
-            "description": "Thereare no mortgages or debentures associated with this company",
+            "description": "There are no mortgages or debentures associated with this company",
             "dnbCode": 34177
           },
           {
-            "description": "Thetotal liabilites to net worth ratio of the company is strong",
+            "description": "The total liabilites to net worth ratio of the company is strong",
             "dnbCode": 34170
           },
           {
-            "description": "Thereare no outstanding Judgments or Scottish Decrees associated with this company",
+            "description": "There are no outstanding Judgments or Scottish Decrees associated with this company",
             "dnbCode": 34138
           }
         ],
@@ -537,27 +537,27 @@
         "riskIncidencePercentage": 9.97,
         "scoreCommentary": [
           {
-            "description": "Demographicinformation indicates low risk",
+            "description": "Demographic information indicates low risk",
             "dnbCode": 27645
           },
           {
-            "description": "There arefew or no negative events associated with principals",
+            "description": "There are few or no negative events associated with principals",
             "dnbCode": 15824
           },
           {
-            "description": "Therehave been no insolvency events associated to this company",
+            "description": "There have been no insolvency events associated to this company",
             "dnbCode": 34144
           },
           {
-            "description": "Thereare no mortgages or debentures associated with this company",
+            "description": "There are no mortgages or debentures associated with this company",
             "dnbCode": 34177
           },
           {
-            "description": "Thetotal liabilites to net worth ratio of the company is strong",
+            "description": "The total liabilites to net worth ratio of the company is strong",
             "dnbCode": 34170
           },
           {
-            "description": "Thereare no outstanding Judgments or Scottish Decrees associated with this company",
+            "description": "There are no outstanding Judgments or Scottish Decrees associated with this company",
             "dnbCode": 34138
           }
         ],
@@ -576,27 +576,27 @@
         "riskIncidencePercentage": 0.05,
         "scoreCommentary": [
           {
-            "description": "Demographicinformation indicates low risk",
+            "description": "Demographic information indicates low risk",
             "dnbCode": 27645
           },
           {
-            "description": "There arefew or no negative events associated with principals",
+            "description": "There are few or no negative events associated with principals",
             "dnbCode": 15824
           },
           {
-            "description": "Therehave been no insolvency events associated to this company",
+            "description": "There have been no insolvency events associated to this company",
             "dnbCode": 34144
           },
           {
-            "description": "Thereare no mortgages or debentures associated with this company",
+            "description": "There are no mortgages or debentures associated with this company",
             "dnbCode": 34177
           },
           {
-            "description": "Thetotal liabilites to net worth ratio of the company is strong",
+            "description": "The total liabilites to net worth ratio of the company is strong",
             "dnbCode": 34170
           },
           {
-            "description": "Thereare no outstanding Judgments or Scottish Decrees associated with this company",
+            "description": "There are no outstanding Judgments or Scottish Decrees associated with this company",
             "dnbCode": 34138
           }
         ],

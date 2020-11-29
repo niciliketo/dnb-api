@@ -148,5 +148,18 @@ module Dnb
                 '&tradeUp=hq&customerReference=12345&orderReason=Credit Decision'
       assert_equal expected, rt.to_s
     end
+
+    def test_to_s_on_company_report
+      rt = Dnb::Api::ReportType.new
+      product = :'Company Report'
+      product_components = ['PDF']
+      rt.product = product
+      rt.product_components = product_components
+      rt.order_reason = :'Credit Decision'
+      rt.customer_reference = '12345'
+      expected = 'productId=birstd&inLanguage=en-US&reportFormat=PDF'\
+                '&tradeUp=hq&customerReference=12345&orderReason=Credit Decision'
+      assert_equal expected, rt.to_s
+    end
   end
 end
