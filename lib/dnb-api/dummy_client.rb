@@ -28,7 +28,12 @@ module Dnb
 
       def company_profile(_duns, report_type)
         check_connected
-        file = File.read(get_path('company_profile.json'))
+        file =
+          if company_report_request?(report_type)
+            company_profile_birstd
+          else
+            company_profile_trade_credit
+          end
         JSON.parse file
       end
 
@@ -36,6 +41,14 @@ module Dnb
 
       def get_path(file)
         "#{__dir__}/../../dummy_responses/#{file}"
+      end
+
+      def company_profile_trade_credit
+        File.read(get_path('company_profile_trade_credit.json'))
+      end
+
+      def company_profile_birstd
+        File.read(get_path('company_profile_birstd.json'))
       end
     end
   end

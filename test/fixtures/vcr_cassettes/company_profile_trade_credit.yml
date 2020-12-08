@@ -51,17 +51,17 @@ http_interactions:
       Content-Length:
       - '65'
       Date:
-      - Fri, 20 Nov 2020 17:56:59 GMT
+      - Tue, 08 Dec 2020 20:34:50 GMT
       Connection:
       - keep-alive
       Server-Timing:
       - cdn-cache; desc=MISS
-      - edge; dur=65
-      - origin; dur=323
+      - edge; dur=2
+      - origin; dur=233
     body:
       encoding: UTF-8
-      string: '{"access_token":"XXX051bJS958010gzLd554E6Z46P","expiresIn":86400}'
-  recorded_at: Fri, 20 Nov 2020 17:56:59 GMT
+      string: '{"access_token":"ua9a06lSt59Aq68g83j47w09XO1j","expiresIn":86400}'
+  recorded_at: Tue, 08 Dec 2020 20:34:50 GMT
 - request:
     method: get
     uri: https://plus.dnb.com/v1/data/duns/216832106?customerReference=12345&orderReason=6332&productId=cmptcs&reportFormat=html&tradeUp=hq&versionId=v1
@@ -72,7 +72,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer XXX051bJS958010gzLd554E6Z46P
+      - Bearer ua9a06lSt59Aq68g83j47w09XO1j
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -115,18 +115,18 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Fri, 20 Nov 2020 17:56:59 GMT
+      - Tue, 08 Dec 2020 20:34:51 GMT
       Content-Length:
-      - '11641'
+      - '11638'
       Connection:
       - keep-alive
       Server-Timing:
       - cdn-cache; desc=MISS
-      - edge; dur=3
-      - origin; dur=84
+      - edge; dur=1
+      - origin; dur=109
     body:
       encoding: UTF-8
-      string: '{"transactionDetail":{"transactionID":"rrt-0daa1ee1e57942d41-b-eu-17974-26331000-5_1559","transactionTimestamp":"2020-11-20T17:56:59.292Z","inLanguage":"en-US","productID":"cmptcs","productVersion":"1"},"inquiryDetail":{"productVersion":"v1","orderReason":"6332","productID":"cmptcs","customerReference":"12345","duns":"216832106","tradeUp":"hq"},"organization":{"duns":"216832106","dunsControlStatus":{"operatingStatus":{"description":"Active","dnbCode":9074},"isMarketable":false,"isMailUndeliverable":false,"isTelephoneDisconnected":false,"isDelisted":false,"subjectHandlingDetails":[{"description":"Suppress
+      string: '{"transactionDetail":{"transactionID":"rrt-0daa1ee1e57942d41-b-eu-18768-32924717-11_1559","transactionTimestamp":"2020-12-08T20:34:51.102Z","inLanguage":"en-US","productID":"cmptcs","productVersion":"1"},"inquiryDetail":{"productVersion":"v1","orderReason":"6332","productID":"cmptcs","customerReference":"12345","duns":"216832106","tradeUp":"hq"},"organization":{"duns":"216832106","dunsControlStatus":{"operatingStatus":{"description":"Active","dnbCode":9074},"isMarketable":false,"isMailUndeliverable":false,"isTelephoneDisconnected":false,"isDelisted":false,"subjectHandlingDetails":[{"description":"Suppress
         Telephone Number from Marketing Lists","dnbCode":2540}],"fullReportDate":"2010-08-03"},"primaryName":"MARKET
         DOJO LTD","registeredName":"MARKET DOJO LTD","tradeStyleNames":[],"doNotConfuseNames":[],"defaultCurrency":"GBP","telephone":[{"telephoneNumber":"1174566817","isdCode":"44","isUnreachable":false}],"primaryAddress":{"language":{"description":"English","dnbCode":39},"addressCountry":{"name":"United
         Kingdom","isoAlpha2Code":"GB"},"continentalRegion":{"name":"Europe"},"addressLocality":{"name":"BRISTOL"},"minorTownName":null,"addressRegion":{},"addressCounty":{},"postalCode":"BS7
@@ -183,5 +183,5 @@ http_interactions:
         are no mortgages or debentures associated with this company","dnbCode":34177},{"description":"The
         total liabilites to net worth ratio of the company is strong","dnbCode":34170},{"description":"There
         are no outstanding Judgments or Scottish Decrees associated with this company","dnbCode":34138}],"scoreOverrideReasons":[]},"viabilityRating":{},"historyRating":{},"hasSevereNegativeEvents":false,"overallRiskAssessment":{"description":"Low-Moderate","dnbCode":13694}}}}'
-  recorded_at: Fri, 20 Nov 2020 17:56:59 GMT
+  recorded_at: Tue, 08 Dec 2020 20:34:51 GMT
 recorded_with: VCR 6.0.0

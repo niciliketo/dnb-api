@@ -31,6 +31,7 @@ module Dnb
       def connected?
         !@access_token.nil?
       end
+      
       def criteria_search(params)
         url = build_url(CRITERIA_SEARCH_PATH)
         Dnb::Api.logger.debug("Making request for token to #{url}")
@@ -44,7 +45,7 @@ module Dnb
       end
 
       def company_profile(duns, report_type)
-        url = build_url(COMPANY_PROFILE_PATH, duns, report_type)
+        url = build_url(company_profile_path(report_type), duns, report_type)
         Dnb::Api.logger.debug("Making request for token to #{url}")
         response = Faraday.get do |req|
           req.url url

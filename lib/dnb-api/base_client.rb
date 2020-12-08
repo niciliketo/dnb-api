@@ -40,6 +40,23 @@ module Dnb
       def check_connected
         raise NotConnected if @access_token.nil?
       end
+
+      ##
+      # Return the right base_url for the current report type
+      def company_profile_path(report_type)
+        if company_report_request?(report_type)
+          COMPANY_REPORTS_PATH
+        else
+          COMPANY_PROFILE_PATH
+        end
+      end
+
+      ##
+      # Are we requesting a D&B 'company_report' ?
+      # birstd/comprh match means yes
+      def company_report_request?(report_type)
+        report_type.match?(/birstd|comprh/)
+      end
     end
   end
 end

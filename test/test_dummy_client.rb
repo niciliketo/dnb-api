@@ -48,12 +48,21 @@ module Dnb
                    'Incorrect duns returned'
     end
 
-    def test_company_profile_response
+    def test_company_profile_response_trade_credit
+      rt = 'productId=cmptcs&versionId=v1&tradeUp=hq&customerReference=12345&orderReason=6332&reportFormat=html'
       client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :dummy)
       client.connect
-      result = client.company_profile('216832106', Dnb::Api::ReportType.new)
+      result = client.company_profile('216832106', rt)
 
       assert_equal '07332766', result['organization']['registrationNumbers'][0]['registrationNumber']
+    end
+
+    def test_company_profile_response_birstd
+      rt = 'productId=birstd&inLanguage=en-US&reportFormat=PDF'
+      client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :dummy)
+      client.connect
+      result = client.company_profile('216832106', rt)
+      assert_equal 'application/pdf', result['contents'][0]['contentFormat']
     end
 
     def test_can_assign_log_level
