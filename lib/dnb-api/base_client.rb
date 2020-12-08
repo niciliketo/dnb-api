@@ -55,7 +55,7 @@ module Dnb
       # Are we requesting a D&B 'company_report' ?
       # birstd/comprh match means yes
       def company_report_request?(report_type)
-        report_type.match?(/birstd|comprh/)
+        report_type.to_s.match?(/birstd|comprh/)
       end
     end
   end
