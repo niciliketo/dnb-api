@@ -26,6 +26,12 @@ module Dnb
         JSON.parse file
       end
 
+      def cleanse_match(_params)
+        check_connected
+        file = File.read(get_path('cleanse_match.json'))
+        JSON.parse file
+      end
+
       def company_profile(_duns, report_type)
         check_connected
         file =

@@ -31,7 +31,7 @@ module Dnb
       def connected?
         !@access_token.nil?
       end
-      
+
       def criteria_search(params)
         url = build_url(CRITERIA_SEARCH_PATH)
         Dnb::Api.logger.debug("Making request for token to #{url}")
@@ -39,6 +39,18 @@ module Dnb
           req.url url
           req.headers = HEADERS.merge(auth_header)
           req.body = params.to_json
+        end
+        Dnb::Api.logger.debug("response: #{response}")
+        JSON.parse response.body
+      end
+
+      def cleanse_match(params)
+        url = build_url(CLEANSE_MATCH_PATH)
+        Dnb::Api.logger.debug("Making request for token to #{url}")
+        response = Faraday.get do |req|
+          req.url url
+          req.params = params
+          req.headers = HEADERS.merge(auth_header)
         end
         Dnb::Api.logger.debug("response: #{response}")
         JSON.parse response.body

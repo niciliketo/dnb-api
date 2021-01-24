@@ -1,0 +1,260 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://plus.dnb.com/v2/token
+    body:
+      encoding: UTF-8
+      string: '{ "grant_type" : "client_credentials" }'
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Authorization:
+      - Basic ZDc5ZTUwNjIwZDI0NGQ0OGExYTNjNTYxYjU0MzU0ODE3M2QxZDE3YTdkYzY0ODIxYmM0ZDYzZjRiYTMxMDc2ZTpkOTY0ZDdlMTkzNzI0NDM4OWVjNjBhYzQ5YzMyMTk1Y2YwMDU0NjY2M2M1NTQ2YjM4ZWVjMWRiZWJjNTY4Mjlh
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - ''
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate, private, s-maxage=0;
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - Deny
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '65'
+      Date:
+      - Sun, 24 Jan 2021 10:07:22 GMT
+      Connection:
+      - keep-alive
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=9
+      - origin; dur=105
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"54g7TT0X1H14EnUm0618z824i6A2","expiresIn":86400}'
+  recorded_at: Sun, 24 Jan 2021 10:07:22 GMT
+- request:
+    method: get
+    uri: https://plus.dnb.com/v1/match/cleanseMatch?countryISOAlpha2Code=GB&name=Market%20Dojo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer 54g7TT0X1H14EnUm0618z824i6A2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS,  POST
+      Access-Control-Allow-Origin:
+      - ''
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate, private, s-maxage=0;
+      Candidatesreturnedquantity:
+      - '10'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Direct-Plus-Product:
+      - ''
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Status:
+      - success
+      X-Tracy-Annotations:
+      - lookupType,NA,engineName,NextGen
+      X-Xss-Protection:
+      - 1; mode=block
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Sun, 24 Jan 2021 10:07:22 GMT
+      Content-Length:
+      - '24791'
+      Connection:
+      - keep-alive
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=4
+      - origin; dur=283
+    body:
+      encoding: UTF-8
+      string: '{"transactionDetail":{"transactionID":"rrt-0cba0815aed77662f-c-eu-7495-56335946-32","transactionTimestamp":"2021-01-24T10:07:22.506Z","inLanguage":"en-US","serviceVersion":"1"},"inquiryDetail":{"name":"Market
+        Dojo","address":{"countryISOAlpha2Code":"GB"}},"candidatesMatchedQuantity":10,"matchDataCriteria":"Name
+        and Address Lookup","matchCandidates":[{"displaySequence":1,"organization":{"duns":"216832106","websiteAddress":[],"dunsControlStatus":{"operatingStatus":{"description":"Active","dnbCode":9074},"isMailUndeliverable":false},"primaryName":"MARKET
+        DOJO LTD","tradeStyleNames":[],"telephone":[{"telephoneNumber":"01174566817","isUnreachable":false}],"primaryAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{"name":"BRISTOL"},"addressRegion":{},"postalCode":"BS7
+        8EL","postalCodeExtension":null,"streetAddress":{"line1":"11 Wolseley Road","line2":null}},"mailingAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{},"addressRegion":{},"postalCode":null,"postalCodeExtension":null,"streetAddress":{}},"registrationNumbers":[{"registrationNumber":"07332766","typeDescription":"COMPANIES
+        REGISTRY OFFICE Number (GB)","typeDnBCode":2541}],"mostSeniorPrincipals":[{"fullName":"ALUN  RAFIQUE"}],"isStandalone":true,"corporateLinkage":{}},"matchQualityInformation":{"confidenceCode":6,"matchGrade":"AZZZZZZZZBZ","matchGradeComponentsCount":11,"matchGradeComponents":[{"componentType":"Name","componentRating":"A"},{"componentType":"Street
+        Number","componentRating":"Z"},{"componentType":"Street Name","componentRating":"Z"},{"componentType":"City","componentRating":"Z"},{"componentType":"State","componentRating":"Z"},{"componentType":"PO
+        Box","componentRating":"Z"},{"componentType":"Phone","componentRating":"Z"},{"componentType":"Postal
+        Code","componentRating":"Z"},{"componentType":"Density","componentRating":"Z"},{"componentType":"Uniqueness","componentRating":"B"},{"componentType":"Sic","componentRating":"Z"}],"matchDataProfile":"0099999998999899000098000098","matchDataProfileComponentsCount":14,"matchDataProfileComponents":[{"componentType":"Name","componentValue":"00"},{"componentType":"Street
+        Number","componentValue":"99"},{"componentType":"Street Name","componentValue":"99"},{"componentType":"City","componentValue":"99"},{"componentType":"State","componentValue":"98"},{"componentType":"PO
+        Box","componentValue":"99"},{"componentType":"Phone","componentValue":"98"},{"componentType":"Postal
+        Code","componentValue":"99"},{"componentType":"DUNS","componentValue":"00"},{"componentType":"SIC","componentValue":"00"},{"componentType":"Density","componentValue":"98"},{"componentType":"Uniqueness","componentValue":"00"},{"componentType":"National
+        ID","componentValue":"00"},{"componentType":"URL","componentValue":"98"}],"nameMatchScore":100.0}},{"displaySequence":2,"organization":{"duns":"210584234","websiteAddress":[],"dunsControlStatus":{"operatingStatus":{"description":"Active","dnbCode":9074},"isMailUndeliverable":false},"primaryName":"The
+        Dojo","tradeStyleNames":[],"telephone":[{"telephoneNumber":"07930498392","isUnreachable":false}],"primaryAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{"name":"SIDCUP"},"addressRegion":{},"postalCode":"DA14
+        6RA","postalCodeExtension":null,"streetAddress":{"line1":"49 Sydney Road","line2":null}},"mailingAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{},"addressRegion":{},"postalCode":null,"postalCodeExtension":null,"streetAddress":{}},"registrationNumbers":[],"mostSeniorPrincipals":[{"fullName":"GEOFF  HARRIE"}],"isStandalone":true,"corporateLinkage":{}},"matchQualityInformation":{"confidenceCode":4,"matchGrade":"BZZZZZZZZBZ","matchGradeComponentsCount":11,"matchGradeComponents":[{"componentType":"Name","componentRating":"B"},{"componentType":"Street
+        Number","componentRating":"Z"},{"componentType":"Street Name","componentRating":"Z"},{"componentType":"City","componentRating":"Z"},{"componentType":"State","componentRating":"Z"},{"componentType":"PO
+        Box","componentRating":"Z"},{"componentType":"Phone","componentRating":"Z"},{"componentType":"Postal
+        Code","componentRating":"Z"},{"componentType":"Density","componentRating":"Z"},{"componentType":"Uniqueness","componentRating":"B"},{"componentType":"Sic","componentRating":"Z"}],"matchDataProfile":"0099999998999899000098009998","matchDataProfileComponentsCount":14,"matchDataProfileComponents":[{"componentType":"Name","componentValue":"00"},{"componentType":"Street
+        Number","componentValue":"99"},{"componentType":"Street Name","componentValue":"99"},{"componentType":"City","componentValue":"99"},{"componentType":"State","componentValue":"98"},{"componentType":"PO
+        Box","componentValue":"99"},{"componentType":"Phone","componentValue":"98"},{"componentType":"Postal
+        Code","componentValue":"99"},{"componentType":"DUNS","componentValue":"00"},{"componentType":"SIC","componentValue":"00"},{"componentType":"Density","componentValue":"98"},{"componentType":"Uniqueness","componentValue":"00"},{"componentType":"National
+        ID","componentValue":"99"},{"componentType":"URL","componentValue":"98"}],"nameMatchScore":45.23457}},{"displaySequence":3,"organization":{"duns":"216197828","websiteAddress":[],"dunsControlStatus":{"operatingStatus":{"description":"Active","dnbCode":9074},"isMailUndeliverable":false},"primaryName":"The
+        Dojo","tradeStyleNames":[],"telephone":[{"telephoneNumber":"01158754212","isUnreachable":false}],"primaryAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{"name":"NOTTINGHAM"},"addressRegion":{},"postalCode":"NG9
+        2ET","postalCodeExtension":null,"streetAddress":{"line1":"Humber Road, Beeston","line2":null}},"mailingAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{},"addressRegion":{},"postalCode":null,"postalCodeExtension":null,"streetAddress":{}},"registrationNumbers":[],"mostSeniorPrincipals":[],"isStandalone":true,"corporateLinkage":{}},"matchQualityInformation":{"confidenceCode":4,"matchGrade":"BZZZZZZZZBZ","matchGradeComponentsCount":11,"matchGradeComponents":[{"componentType":"Name","componentRating":"B"},{"componentType":"Street
+        Number","componentRating":"Z"},{"componentType":"Street Name","componentRating":"Z"},{"componentType":"City","componentRating":"Z"},{"componentType":"State","componentRating":"Z"},{"componentType":"PO
+        Box","componentRating":"Z"},{"componentType":"Phone","componentRating":"Z"},{"componentType":"Postal
+        Code","componentRating":"Z"},{"componentType":"Density","componentRating":"Z"},{"componentType":"Uniqueness","componentRating":"B"},{"componentType":"Sic","componentRating":"Z"}],"matchDataProfile":"0099999998999899000098009998","matchDataProfileComponentsCount":14,"matchDataProfileComponents":[{"componentType":"Name","componentValue":"00"},{"componentType":"Street
+        Number","componentValue":"99"},{"componentType":"Street Name","componentValue":"99"},{"componentType":"City","componentValue":"99"},{"componentType":"State","componentValue":"98"},{"componentType":"PO
+        Box","componentValue":"99"},{"componentType":"Phone","componentValue":"98"},{"componentType":"Postal
+        Code","componentValue":"99"},{"componentType":"DUNS","componentValue":"00"},{"componentType":"SIC","componentValue":"00"},{"componentType":"Density","componentValue":"98"},{"componentType":"Uniqueness","componentValue":"00"},{"componentType":"National
+        ID","componentValue":"99"},{"componentType":"URL","componentValue":"98"}],"nameMatchScore":45.23457}},{"displaySequence":4,"organization":{"duns":"210651288","websiteAddress":[],"dunsControlStatus":{"operatingStatus":{"description":"Active","dnbCode":9074},"isMailUndeliverable":false},"primaryName":"Dojo
+        Bar","tradeStyleNames":[],"telephone":[],"primaryAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{"name":"BRISTOL"},"addressRegion":{},"postalCode":"BS1
+        5LJ","postalCodeExtension":null,"streetAddress":{"line1":"16 Park Row","line2":null}},"mailingAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{},"addressRegion":{},"postalCode":null,"postalCodeExtension":null,"streetAddress":{}},"registrationNumbers":[],"mostSeniorPrincipals":[{"fullName":"D  LAWRENCE"}],"isStandalone":true,"corporateLinkage":{}},"matchQualityInformation":{"confidenceCode":4,"matchGrade":"BZZZZZZZZBZ","matchGradeComponentsCount":11,"matchGradeComponents":[{"componentType":"Name","componentRating":"B"},{"componentType":"Street
+        Number","componentRating":"Z"},{"componentType":"Street Name","componentRating":"Z"},{"componentType":"City","componentRating":"Z"},{"componentType":"State","componentRating":"Z"},{"componentType":"PO
+        Box","componentRating":"Z"},{"componentType":"Phone","componentRating":"Z"},{"componentType":"Postal
+        Code","componentRating":"Z"},{"componentType":"Density","componentRating":"Z"},{"componentType":"Uniqueness","componentRating":"B"},{"componentType":"Sic","componentRating":"Z"}],"matchDataProfile":"0099999998999899000098009998","matchDataProfileComponentsCount":14,"matchDataProfileComponents":[{"componentType":"Name","componentValue":"00"},{"componentType":"Street
+        Number","componentValue":"99"},{"componentType":"Street Name","componentValue":"99"},{"componentType":"City","componentValue":"99"},{"componentType":"State","componentValue":"98"},{"componentType":"PO
+        Box","componentValue":"99"},{"componentType":"Phone","componentValue":"98"},{"componentType":"Postal
+        Code","componentValue":"99"},{"componentType":"DUNS","componentValue":"00"},{"componentType":"SIC","componentValue":"00"},{"componentType":"Density","componentValue":"98"},{"componentType":"Uniqueness","componentValue":"00"},{"componentType":"National
+        ID","componentValue":"99"},{"componentType":"URL","componentValue":"98"}],"nameMatchScore":37.0}},{"displaySequence":5,"organization":{"duns":"216745921","websiteAddress":[],"dunsControlStatus":{"operatingStatus":{"description":"Active","dnbCode":9074},"isMailUndeliverable":false},"primaryName":"DOJO
+        DESIGN LIMITED","tradeStyleNames":[],"telephone":[{"telephoneNumber":"01314660523","isUnreachable":false}],"primaryAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{"name":"STIRLING"},"addressRegion":{},"postalCode":"FK8
+        2QT","postalCodeExtension":null,"streetAddress":{"line1":"18 Victoria Place","line2":null}},"mailingAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{},"addressRegion":{},"postalCode":null,"postalCodeExtension":null,"streetAddress":{}},"registrationNumbers":[{"registrationNumber":"SC379171","typeDescription":"COMPANIES
+        REGISTRY OFFICE Number (GB)","typeDnBCode":2541}],"mostSeniorPrincipals":[{"fullName":"CATRIONA  DICKSON"}],"isStandalone":true,"corporateLinkage":{}},"matchQualityInformation":{"confidenceCode":4,"matchGrade":"BZZZZZZZZBZ","matchGradeComponentsCount":11,"matchGradeComponents":[{"componentType":"Name","componentRating":"B"},{"componentType":"Street
+        Number","componentRating":"Z"},{"componentType":"Street Name","componentRating":"Z"},{"componentType":"City","componentRating":"Z"},{"componentType":"State","componentRating":"Z"},{"componentType":"PO
+        Box","componentRating":"Z"},{"componentType":"Phone","componentRating":"Z"},{"componentType":"Postal
+        Code","componentRating":"Z"},{"componentType":"Density","componentRating":"Z"},{"componentType":"Uniqueness","componentRating":"B"},{"componentType":"Sic","componentRating":"Z"}],"matchDataProfile":"0099999998999899000098000098","matchDataProfileComponentsCount":14,"matchDataProfileComponents":[{"componentType":"Name","componentValue":"00"},{"componentType":"Street
+        Number","componentValue":"99"},{"componentType":"Street Name","componentValue":"99"},{"componentType":"City","componentValue":"99"},{"componentType":"State","componentValue":"98"},{"componentType":"PO
+        Box","componentValue":"99"},{"componentType":"Phone","componentValue":"98"},{"componentType":"Postal
+        Code","componentValue":"99"},{"componentType":"DUNS","componentValue":"00"},{"componentType":"SIC","componentValue":"00"},{"componentType":"Density","componentValue":"98"},{"componentType":"Uniqueness","componentValue":"00"},{"componentType":"National
+        ID","componentValue":"00"},{"componentType":"URL","componentValue":"98"}],"nameMatchScore":37.0}},{"displaySequence":6,"organization":{"duns":"216999616","websiteAddress":[],"dunsControlStatus":{"operatingStatus":{"description":"Active","dnbCode":9074},"isMailUndeliverable":false},"primaryName":"DOJO
+        INSTALLATIONS LIMITED","tradeStyleNames":[],"telephone":[],"primaryAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{"name":"WOLVERHAMPTON"},"addressRegion":{},"postalCode":"WV4
+        6JX","postalCodeExtension":null,"streetAddress":{"line1":"Saturn Centre Spring
+        Road Ettingshall","line2":null}},"mailingAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{},"addressRegion":{},"postalCode":null,"postalCodeExtension":null,"streetAddress":{}},"registrationNumbers":[{"registrationNumber":"07450969","typeDescription":"COMPANIES
+        REGISTRY OFFICE Number (GB)","typeDnBCode":2541}],"mostSeniorPrincipals":[{"fullName":"LORAINE
+        E NICHOLSON"}],"isStandalone":true,"corporateLinkage":{}},"matchQualityInformation":{"confidenceCode":4,"matchGrade":"BZZZZZZZZBZ","matchGradeComponentsCount":11,"matchGradeComponents":[{"componentType":"Name","componentRating":"B"},{"componentType":"Street
+        Number","componentRating":"Z"},{"componentType":"Street Name","componentRating":"Z"},{"componentType":"City","componentRating":"Z"},{"componentType":"State","componentRating":"Z"},{"componentType":"PO
+        Box","componentRating":"Z"},{"componentType":"Phone","componentRating":"Z"},{"componentType":"Postal
+        Code","componentRating":"Z"},{"componentType":"Density","componentRating":"Z"},{"componentType":"Uniqueness","componentRating":"B"},{"componentType":"Sic","componentRating":"Z"}],"matchDataProfile":"0099999998999899000098000098","matchDataProfileComponentsCount":14,"matchDataProfileComponents":[{"componentType":"Name","componentValue":"00"},{"componentType":"Street
+        Number","componentValue":"99"},{"componentType":"Street Name","componentValue":"99"},{"componentType":"City","componentValue":"99"},{"componentType":"State","componentValue":"98"},{"componentType":"PO
+        Box","componentValue":"99"},{"componentType":"Phone","componentValue":"98"},{"componentType":"Postal
+        Code","componentValue":"99"},{"componentType":"DUNS","componentValue":"00"},{"componentType":"SIC","componentValue":"00"},{"componentType":"Density","componentValue":"98"},{"componentType":"Uniqueness","componentValue":"00"},{"componentType":"National
+        ID","componentValue":"00"},{"componentType":"URL","componentValue":"98"}],"nameMatchScore":37.0}},{"displaySequence":7,"organization":{"duns":"219625691","websiteAddress":[],"dunsControlStatus":{"operatingStatus":{"description":"Active","dnbCode":9074},"isMailUndeliverable":false},"primaryName":"SALE
+        DOJO LIMITED","tradeStyleNames":[],"telephone":[],"primaryAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{"name":"MANCHESTER"},"addressRegion":{},"postalCode":"M3
+        5JZ","postalCodeExtension":null,"streetAddress":{"line1":"Alex House, 260/268
+        Chapel Street, Salford","line2":null}},"mailingAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{},"addressRegion":{},"postalCode":null,"postalCodeExtension":null,"streetAddress":{}},"registrationNumbers":[{"registrationNumber":"06144277","typeDescription":"COMPANIES
+        REGISTRY OFFICE Number (GB)","typeDnBCode":2541}],"mostSeniorPrincipals":[{"fullName":"IAN  SWAIN"}],"isStandalone":true,"corporateLinkage":{}},"matchQualityInformation":{"confidenceCode":4,"matchGrade":"BZZZZZZZZBZ","matchGradeComponentsCount":11,"matchGradeComponents":[{"componentType":"Name","componentRating":"B"},{"componentType":"Street
+        Number","componentRating":"Z"},{"componentType":"Street Name","componentRating":"Z"},{"componentType":"City","componentRating":"Z"},{"componentType":"State","componentRating":"Z"},{"componentType":"PO
+        Box","componentRating":"Z"},{"componentType":"Phone","componentRating":"Z"},{"componentType":"Postal
+        Code","componentRating":"Z"},{"componentType":"Density","componentRating":"Z"},{"componentType":"Uniqueness","componentRating":"B"},{"componentType":"Sic","componentRating":"Z"}],"matchDataProfile":"0099999998999899000098000098","matchDataProfileComponentsCount":14,"matchDataProfileComponents":[{"componentType":"Name","componentValue":"00"},{"componentType":"Street
+        Number","componentValue":"99"},{"componentType":"Street Name","componentValue":"99"},{"componentType":"City","componentValue":"99"},{"componentType":"State","componentValue":"98"},{"componentType":"PO
+        Box","componentValue":"99"},{"componentType":"Phone","componentValue":"98"},{"componentType":"Postal
+        Code","componentValue":"99"},{"componentType":"DUNS","componentValue":"00"},{"componentType":"SIC","componentValue":"00"},{"componentType":"Density","componentValue":"98"},{"componentType":"Uniqueness","componentValue":"00"},{"componentType":"National
+        ID","componentValue":"00"},{"componentType":"URL","componentValue":"98"}],"nameMatchScore":37.0}},{"displaySequence":8,"organization":{"duns":"219754398","websiteAddress":[],"dunsControlStatus":{"operatingStatus":{"description":"Active","dnbCode":9074},"isMailUndeliverable":false},"primaryName":"DOJO
+        SUPPLIES LIMITED","tradeStyleNames":[],"telephone":[],"primaryAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{"name":"BRENTWOOD"},"addressRegion":{},"postalCode":"CM13
+        1YX","postalCodeExtension":null,"streetAddress":{"line1":"THE MARTIAL ARTS
+        CENTRE BANNISTER DRIVE","line2":null}},"mailingAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{},"addressRegion":{},"postalCode":null,"postalCodeExtension":null,"streetAddress":{}},"registrationNumbers":[{"registrationNumber":"08782347","typeDescription":"COMPANIES
+        REGISTRY OFFICE Number (GB)","typeDnBCode":2541}],"mostSeniorPrincipals":[{"fullName":"SIMON
+        J KIDD"}],"isStandalone":true,"corporateLinkage":{}},"matchQualityInformation":{"confidenceCode":4,"matchGrade":"BZZZZZZZZBZ","matchGradeComponentsCount":11,"matchGradeComponents":[{"componentType":"Name","componentRating":"B"},{"componentType":"Street
+        Number","componentRating":"Z"},{"componentType":"Street Name","componentRating":"Z"},{"componentType":"City","componentRating":"Z"},{"componentType":"State","componentRating":"Z"},{"componentType":"PO
+        Box","componentRating":"Z"},{"componentType":"Phone","componentRating":"Z"},{"componentType":"Postal
+        Code","componentRating":"Z"},{"componentType":"Density","componentRating":"Z"},{"componentType":"Uniqueness","componentRating":"B"},{"componentType":"Sic","componentRating":"Z"}],"matchDataProfile":"0099999998999899000098000098","matchDataProfileComponentsCount":14,"matchDataProfileComponents":[{"componentType":"Name","componentValue":"00"},{"componentType":"Street
+        Number","componentValue":"99"},{"componentType":"Street Name","componentValue":"99"},{"componentType":"City","componentValue":"99"},{"componentType":"State","componentValue":"98"},{"componentType":"PO
+        Box","componentValue":"99"},{"componentType":"Phone","componentValue":"98"},{"componentType":"Postal
+        Code","componentValue":"99"},{"componentType":"DUNS","componentValue":"00"},{"componentType":"SIC","componentValue":"00"},{"componentType":"Density","componentValue":"98"},{"componentType":"Uniqueness","componentValue":"00"},{"componentType":"National
+        ID","componentValue":"00"},{"componentType":"URL","componentValue":"98"}],"nameMatchScore":37.0}},{"displaySequence":9,"organization":{"duns":"217809660","websiteAddress":[],"dunsControlStatus":{"operatingStatus":{"description":"Active","dnbCode":9074},"isMailUndeliverable":false},"primaryName":"Total
+        Dojo","tradeStyleNames":[],"telephone":[{"telephoneNumber":"01908632347","isUnreachable":false}],"primaryAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{"name":"MILTON KEYNES"},"addressRegion":{},"postalCode":"MK2
+        2HE","postalCodeExtension":null,"streetAddress":{"line1":"28 The Concourse
+        Centre Brunel Centre","line2":null}},"mailingAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{},"addressRegion":{},"postalCode":null,"postalCodeExtension":null,"streetAddress":{}},"registrationNumbers":[],"mostSeniorPrincipals":[{"fullName":"T  DAVIE"}],"isStandalone":true,"corporateLinkage":{}},"matchQualityInformation":{"confidenceCode":4,"matchGrade":"BZZZZZZZZBZ","matchGradeComponentsCount":11,"matchGradeComponents":[{"componentType":"Name","componentRating":"B"},{"componentType":"Street
+        Number","componentRating":"Z"},{"componentType":"Street Name","componentRating":"Z"},{"componentType":"City","componentRating":"Z"},{"componentType":"State","componentRating":"Z"},{"componentType":"PO
+        Box","componentRating":"Z"},{"componentType":"Phone","componentRating":"Z"},{"componentType":"Postal
+        Code","componentRating":"Z"},{"componentType":"Density","componentRating":"Z"},{"componentType":"Uniqueness","componentRating":"B"},{"componentType":"Sic","componentRating":"Z"}],"matchDataProfile":"0099999998999899000098009998","matchDataProfileComponentsCount":14,"matchDataProfileComponents":[{"componentType":"Name","componentValue":"00"},{"componentType":"Street
+        Number","componentValue":"99"},{"componentType":"Street Name","componentValue":"99"},{"componentType":"City","componentValue":"99"},{"componentType":"State","componentValue":"98"},{"componentType":"PO
+        Box","componentValue":"99"},{"componentType":"Phone","componentValue":"98"},{"componentType":"Postal
+        Code","componentValue":"99"},{"componentType":"DUNS","componentValue":"00"},{"componentType":"SIC","componentValue":"00"},{"componentType":"Density","componentValue":"98"},{"componentType":"Uniqueness","componentValue":"00"},{"componentType":"National
+        ID","componentValue":"99"},{"componentType":"URL","componentValue":"98"}],"nameMatchScore":37.0}},{"displaySequence":10,"organization":{"duns":"218835093","websiteAddress":[],"dunsControlStatus":{"operatingStatus":{"description":"Active","dnbCode":9074},"isMailUndeliverable":false},"primaryName":"TOTAL
+        DOJO LIMITED","tradeStyleNames":[],"telephone":[{"telephoneNumber":"07966294175","isUnreachable":false}],"primaryAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{"name":"SWINDON"},"addressRegion":{},"postalCode":"SN4
+        0EU","postalCodeExtension":null,"streetAddress":{"line1":"Swathon Barn The
+        Old Dairy Badbury","line2":null}},"mailingAddress":{"addressCountry":{"isoAlpha2Code":"GB","name":"United
+        Kingdom"},"addressLocality":{},"addressRegion":{},"postalCode":null,"postalCodeExtension":null,"streetAddress":{}},"registrationNumbers":[{"registrationNumber":"06067186","typeDescription":"COMPANIES
+        REGISTRY OFFICE Number (GB)","typeDnBCode":2541}],"mostSeniorPrincipals":[{"fullName":"ANTHONY  DAVIS"}],"isStandalone":true,"corporateLinkage":{}},"matchQualityInformation":{"confidenceCode":4,"matchGrade":"BZZZZZZZZBZ","matchGradeComponentsCount":11,"matchGradeComponents":[{"componentType":"Name","componentRating":"B"},{"componentType":"Street
+        Number","componentRating":"Z"},{"componentType":"Street Name","componentRating":"Z"},{"componentType":"City","componentRating":"Z"},{"componentType":"State","componentRating":"Z"},{"componentType":"PO
+        Box","componentRating":"Z"},{"componentType":"Phone","componentRating":"Z"},{"componentType":"Postal
+        Code","componentRating":"Z"},{"componentType":"Density","componentRating":"Z"},{"componentType":"Uniqueness","componentRating":"B"},{"componentType":"Sic","componentRating":"Z"}],"matchDataProfile":"0099999998999899000098000098","matchDataProfileComponentsCount":14,"matchDataProfileComponents":[{"componentType":"Name","componentValue":"00"},{"componentType":"Street
+        Number","componentValue":"99"},{"componentType":"Street Name","componentValue":"99"},{"componentType":"City","componentValue":"99"},{"componentType":"State","componentValue":"98"},{"componentType":"PO
+        Box","componentValue":"99"},{"componentType":"Phone","componentValue":"98"},{"componentType":"Postal
+        Code","componentValue":"99"},{"componentType":"DUNS","componentValue":"00"},{"componentType":"SIC","componentValue":"00"},{"componentType":"Density","componentValue":"98"},{"componentType":"Uniqueness","componentValue":"00"},{"componentType":"National
+        ID","componentValue":"00"},{"componentType":"URL","componentValue":"98"}],"nameMatchScore":37.0}}],"cleanseAndStandardizeInformation":{}}'
+  recorded_at: Sun, 24 Jan 2021 10:07:22 GMT
+recorded_with: VCR 6.0.0

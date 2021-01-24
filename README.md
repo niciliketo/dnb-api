@@ -18,7 +18,14 @@ https://directplus.documentation.dnb.com/openAPI.html?apiID=searchCriteria
 ```ruby
 client.criteria_search(countryISOAlpha2Code: 'GB', searchTerm: 'Market Dojo')
 ```
-Retreive a record based on DUNS
+
+Find the best matches for search criteria
+
+https://directplus.documentation.dnb.com/openAPI.html?apiID=IDRCleanseMatch
+```ruby
+client.cleanse_match(countryISOAlpha2Code: 'GB', name: 'Market Dojo')
+```
+Retrieve a record based on DUNS
 
 ```ruby
 result = client.company_profile(<duns>, Dnb::Api::Report.new)

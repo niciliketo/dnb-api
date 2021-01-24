@@ -8,6 +8,7 @@ module Dnb
     PRODUCTION_BASE_URL = 'https://plus.dnb.com'
     AUTH_PATH = '/v2/token'
     CRITERIA_SEARCH_PATH = '/v1/search/criteria'
+    CLEANSE_MATCH_PATH = '/v1/match/cleanseMatch'
     COMPANY_REPORTS_PATH = '/v1/reports/duns'
     COMPANY_PROFILE_PATH = '/v1/data/duns'
     HEADERS = { 'Content-Type' => 'application/json' }.freeze

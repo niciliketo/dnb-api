@@ -60,10 +60,21 @@ module Dnb
       end
     end
 
+    def test_cleanse_match_response
+      VCR.use_cassette('cleanse_match') do
+        client = Dnb::Api::Client.new(api_key: 'd79e50620d244d48a1a3c561b543548173d1d17a7dc64821bc4d63f4ba31076e', secret: 'd964d7e1937244389ec60ac49c32195cf00546663c5546b38eec1dbebc56829a', environment: :production)
+        client.connect
+        result = client.cleanse_match(countryISOAlpha2Code: 'GB', name: 'Market Dojo')
+
+        assert_equal '216832106', result['matchCandidates'][0]['organization']['duns'],
+                     'Incorrect duns returned'
+      end
+    end
+
     def test_company_profile_response_trade_credit
       VCR.use_cassette('company_profile_trade_credit') do
         rt = 'productId=cmptcs&versionId=v1&tradeUp=hq&customerReference=12345&orderReason=6332&reportFormat=html'
-        client = Dnb::Api::Client.new(api_key: "d79e50620d244d48a1a3c561b543548173d1d17a7dc64821bc4d63f4ba31076e", secret: "d964d7e1937244389ec60ac49c32195cf00546663c5546b38eec1dbebc56829a", environment: :production)
+        client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :production)
         client.connect
         result = client.company_profile('216832106', rt)
 
@@ -74,7 +85,7 @@ module Dnb
     def test_company_profile_response_birstd
       VCR.use_cassette('company_profile_birstd') do
         rt = 'productId=birstd&inLanguage=en-US&reportFormat=PDF'
-        client = Dnb::Api::Client.new(api_key: "d79e50620d244d48a1a3c561b543548173d1d17a7dc64821bc4d63f4ba31076e", secret: "d964d7e1937244389ec60ac49c32195cf00546663c5546b38eec1dbebc56829a", environment: :production)
+        client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :production)
         client.connect
         result = client.company_profile('216832106', rt)
 

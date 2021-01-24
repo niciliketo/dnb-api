@@ -25,6 +25,10 @@ module Dnb
         @proxy.criteria_search(params)
       end
 
+      def cleanse_match(params)
+        @proxy.cleanse_match(params)
+      end
+
       def company_profile(duns, report_type)
         @proxy.company_profile(duns, report_type)
       end

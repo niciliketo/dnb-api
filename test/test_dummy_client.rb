@@ -48,6 +48,15 @@ module Dnb
                    'Incorrect duns returned'
     end
 
+    def test_cleanse_match_response
+      client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :dummy)
+      client.connect
+      result = client.cleanse_match(countryISOAlpha2Code: 'GB', searchTerm: 'Market Dojo')
+
+      assert_equal '216832106', result['matchCandidates'][0]['organization']['duns'],
+                   'Incorrect duns returned'
+    end
+
     def test_company_profile_response_trade_credit
       rt = 'productId=cmptcs&versionId=v1&tradeUp=hq&customerReference=12345&orderReason=6332&reportFormat=html'
       client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :dummy)

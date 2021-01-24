@@ -95,7 +95,11 @@ module Dnb
          :'Leasing Agreement', :'Rental Agreement']
       end
 
-      def initialize; end
+      def initialize
+        @product = nil
+        @order_reason = nil
+        @product_sub_component = nil
+      end
 
       def product=(product)
         unless klass.products.include?(product)
