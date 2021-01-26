@@ -53,9 +53,9 @@ Learn more: [API authentication on the D&B Website](https://directplus.documenta
 
 ## Identify
 
-This GEM implements the [Criteria Search](https://directplus.documentation.dnb.com/openAPI.html?apiID=searchCriteria) endpoint from the D&B API.
+This GEM implements the [Criteria Search](https://directplus.documentation.dnb.com/openAPI.html?apiID=searchCriteria) and [Cleanse Match](https://directplus.documentation.dnb.com/openAPI.html?apiID=IDRCleanseMatch) endpoints from the D&B API.
 
-Parameters which can be passed to the criteria search method are listed on the D&B API website.
+Parameters which can be passed to these methods are listed on the D&B API website.
 
 ## Enrich
 
@@ -67,7 +67,7 @@ At its simplest, you can simply pass a duns and a new report type to the method.
 result = client.company_profile(<duns>, Dnb::Api::ReportType.new)
 ```
 
-## Report Types
+### Report Types
 
 Report types allow you to define the results which will be returned from D&B.
 
@@ -84,7 +84,7 @@ result = client.company_profile(<duns>, rt)
 
 ```
 
-### Using a string
+#### Using a string
 If you prefer you can just pass a string to the company_profile method instead of a report type:
 
 `productId=cmptcs&customerReference=123456789&orderReason=1234&reportFormat=html&tradeUp=hq&versionId=v1`
@@ -93,20 +93,20 @@ This is also the string returned by a new `ReportType`.
 
 Calling to_s on a Report Type object will display the query string.
 
-### Data Blocks
+#### Data Blocks
 The D&B Data Blocks API allows you to return one or more blocks of information
 
-### Data Product: Analytics
+#### Data Product: Analytics
 
-### Data Product: Company Profile
+#### Data Product: Company Profile
 
-### Data Product: Corporate Linkage, Family Tree
+#### Data Product: Corporate Linkage, Family Tree
 
-### Data Product: Resolved Network Insights
+#### Data Product: Resolved Network Insights
 
-### Company Report
+#### Company Report
 
-### Other
+#### Other
 The following report types are not yet implemented as report types.
 - News and Media, Standard
 - Industry Profile
@@ -118,6 +118,16 @@ You can access them by using the appropriate query string instead of a Report Ty
 result = client.company_profile(<duns>, <query_string_for_required_report>)
 ```
 If you are doing this, then please consider submitting a PR.
+
+### Monitor
+D&B offer the ability to monitor a set of companies for changes
+The monitored companies are grouped under a 'Registration'.
+For small lists of companies, the results can be polled regularly.
+
+Get a list of registration lists
+```ruby
+result = client.monitoring_registrations_list
+```
 
 ## Related Efforts
 

@@ -34,7 +34,7 @@ module Dnb
 
       def criteria_search(params)
         url = build_url(CRITERIA_SEARCH_PATH)
-        Dnb::Api.logger.debug("Making request for token to #{url}")
+        Dnb::Api.logger.debug("Making request for criteria_search to #{url}  with params #{params}")
         response = Faraday.post do |req|
           req.url url
           req.headers = HEADERS.merge(auth_header)
@@ -46,7 +46,7 @@ module Dnb
 
       def cleanse_match(params)
         url = build_url(CLEANSE_MATCH_PATH)
-        Dnb::Api.logger.debug("Making request for token to #{url}")
+        Dnb::Api.logger.debug("Making request for cleanse_match to #{url} with params #{params}")
         response = Faraday.get do |req|
           req.url url
           req.params = params
@@ -58,7 +58,18 @@ module Dnb
 
       def company_profile(duns, report_type)
         url = build_url(company_profile_path(report_type), duns, report_type)
-        Dnb::Api.logger.debug("Making request for token to #{url}")
+        Dnb::Api.logger.debug("Making request for company_profile to #{url}")
+        response = Faraday.get do |req|
+          req.url url
+          req.headers = HEADERS.merge(auth_header)
+        end
+        Dnb::Api.logger.debug("response: #{response}")
+        JSON.parse response.body
+      end
+
+      def monitoring_registrations_list
+        url = build_url(MONITORING_REGISTRATIONS_LIST_PATH)
+        Dnb::Api.logger.debug("Making request for monitoring_registrations_list to #{url}")
         response = Faraday.get do |req|
           req.url url
           req.headers = HEADERS.merge(auth_header)

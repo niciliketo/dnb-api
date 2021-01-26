@@ -3,7 +3,7 @@
 Gem::Specification.new do |s|
   s.name                  = 'dnb-api'
   s.version               = '0.0.0'
-  s.date                  = '2021-01-24'
+  s.date                  = '2021-01-26'
   s.summary               = 'Ruby wrapper to the D&B API'
   s.description           = 'Ruby wrapper to the D&B Connect Plus API'
   s.authors               = ['Nic Martin']

@@ -74,6 +74,14 @@ module Dnb
       assert_equal 'application/pdf', result['contents'][0]['contentFormat']
     end
 
+    def test_monitoring_registrations_list
+      client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :dummy)
+      client.connect
+      result = client.monitoring_registrations_list
+      skip('Waiting for a sample response from D&B')
+      assert_equal 'kkk', result
+    end
+
     def test_can_assign_log_level
       Dnb::Api.logger.level = Logger::FATAL
       assert_equal 4, Dnb::Api.logger.level

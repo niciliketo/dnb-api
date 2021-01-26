@@ -22,18 +22,19 @@ Below are the basic steps to add a new endpoint
    11. Temporarily add this code to the test (after the response is retrieved), replacing <method_name> with the method name you are testing
 
 ```ruby
-        File.open("dummy_responses/<method_name>.json","w") do |f|
+        File.open('dummy_responses/<method_name>.json','w') do |f|
           f.write(result.to_json)
         end
 ```
   10. Check a copy of the response is saved in dummy responses and consider formatting it (we will use this for the dummy_client.rb spec)
   11. Remove the 3 lines above used to save a copy of the response
-1. Add the same method to dummy_client.rb
+4. Add the same method to dummy_client.rb
    1. Reference the json you created above
-2. Add a spec to test_dummy_client.rb
+5. Add a spec to test_dummy_client.rb
    1. Copy an existing test from test_dummy_client.rb
    2. Change the code to check the new API endpoint
    3. Change the check to check the same thing as the real client test
-3. Run the test suite, make sure everything passes
-4. Consider manually testing the new endpoint
-5. Commit
+6. Run the test suite, make sure everything passes
+7. Consider manually testing the new endpoint
+8. Add an example to the README
+9. Commit

@@ -93,6 +93,16 @@ module Dnb
       end
     end
 
+    def test_monitoring_registrations_list
+      VCR.use_cassette('test_monitoring_registrations_list') do
+        client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :production)
+        client.connect
+        result = client.monitoring_registrations_list
+        skip('Waiting for a sample response from D&B')
+        assert_equal 'kkk', result
+      end
+    end
+
     def test_can_assign_log_level
       Dnb::Api.logger.level = Logger::FATAL
       assert_equal 4, Dnb::Api.logger.level

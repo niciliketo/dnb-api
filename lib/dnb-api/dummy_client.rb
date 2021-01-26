@@ -43,6 +43,12 @@ module Dnb
         JSON.parse file
       end
 
+      def monitoring_registrations_list
+        check_connected
+        file = File.read(get_path('monitoring_registrations_list.json'))
+        JSON.parse file
+      end
+
       private
 
       def get_path(file)
