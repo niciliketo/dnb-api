@@ -3,6 +3,7 @@
 require 'faraday'
 require 'json'
 require 'dnb-api/base_client'
+require 'time'
 
 module Dnb
   module Api

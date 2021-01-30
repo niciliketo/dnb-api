@@ -14,6 +14,6 @@ Gem::Specification.new do |s|
   s.files += Dir.glob('dummy_responses/*.json')
   s.add_runtime_dependency 'faraday', '~> 0.1'
   s.add_development_dependency 'vcr', '~> 6'
-  s.homepage              = 'https://github.com/marketdojo/dnb-api'
+  s.homepage              = 'https://github.com/niciliketo/dnb-api'
   s.license               = 'MIT'
 end
