@@ -105,6 +105,25 @@ module Dnb
                     'Requested duns removed from registration  successfully.', result
     end
 
+    def test_monitoring_registration_pull
+      client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :dummy)
+
+      client.connect
+      result = client.monitoring_registration_pull('MDOJO_CMPTCS_01')
+      assert_equal result['notifications'][0]['type'],
+                   'UPDATE', result
+
+    end
+
+    def test_monitoring_registration_replay
+      client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :dummy)
+
+      client.connect
+      result = client.monitoring_registration_replay('MDOJO_CMPTCS_01')
+      assert_equal result['notifications'][0]['type'],
+                   'UPDATE', result
+    end
+
     def test_can_assign_log_level
       Dnb::Api.logger.level = Logger::FATAL
       assert_equal 4, Dnb::Api.logger.level

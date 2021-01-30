@@ -140,6 +140,14 @@ Remove DUNS from a registration
 ```ruby
 result = client.monitoring_registration_remove('<monitoring registration reference>', '<D-U-N-S>')
 ```
+Retrieve changes for a registration
+```ruby
+result = client.monitoring_registration_remove('<monitoring registration reference>')
+```
+Replay changes for a registration
+```ruby
+result = client.monitoring_registration_replay('<monitoring registration reference>', <max_notifications>, <replay_start_time>)
+```
 ## Related Efforts
 
 - [dnb-direct-ruby](https://github.com/jihaia/dnb-direct-ruby) - Another ruby API wrapper for D&B Direct.

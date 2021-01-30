@@ -13,6 +13,7 @@ module Dnb
     COMPANY_PROFILE_PATH = '/v1/data/duns'
     MONITORING_REGISTRATIONS_LIST_PATH = '/v1/monitoring/registrations'
     MONITORING_REGISTRATIONS_DETAILS_PATH = '/v1/monitoring/registrations'
+
     HEADERS = { 'Content-Type' => 'application/json' }.freeze
 
     # For Dummy Client

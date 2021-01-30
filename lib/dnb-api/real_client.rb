@@ -111,6 +111,29 @@ module Dnb
         Dnb::Api.logger.debug("response: #{response}")
         JSON.parse response.body
       end
+
+      def monitoring_registration_pull(reference)
+        url = build_monitoring_registration_url(reference, nil, :pull)
+        Dnb::Api.logger.debug("Making request for monitoring_registration_pull to #{url}")
+        response = Faraday.get do |req|
+          req.url url
+          req.headers = HEADERS.merge(auth_header)
+        end
+        Dnb::Api.logger.debug("response: #{response}")
+        JSON.parse response.body
+      end
+
+      def monitoring_registration_replay(reference, max_notifications, replay_start_time)
+        url = build_monitoring_registration_url(reference, nil, :replay)
+        Dnb::Api.logger.debug("Making request for monitoring_registration_pull to #{url}")
+        response = Faraday.get do |req|
+          req.url url
+          req.headers = HEADERS.merge(auth_header)
+          req.params = { maxNotifications: max_notifications, replayStartTimestamp: replay_start_time.utc.iso8601 }
+        end
+        Dnb::Api.logger.debug("response: #{response}")
+        JSON.parse response.body
+      end
     end
   end
 end

@@ -1,0 +1,119 @@
+{
+  "transactionDetail": {
+    "transactionID": "rrt-0daa1ee1e57942d41-b-eu-10745-52970140-11",
+    "transactionTimestamp": "2021-01-30T11:30:39.631Z",
+    "inLanguage": "en-US"
+  },
+  "inquiryDetail": { "reference": "MDOJO_CMPTCS_01" },
+  "notifications": [
+    {
+      "type": "UPDATE",
+      "organization": { "duns": "213310873" },
+      "elements": [
+        {
+          "element": "organization.dnbAssessment.standardRating.scoreDate",
+          "previous": "2021-01-23",
+          "current": "2021-01-26",
+          "timestamp": "2021-01-27T01:23:13Z"
+        },
+        {
+          "element": "organization.dnbAssessment.creditLimitRecommendation.assessmentDate",
+          "previous": "2021-01-23",
+          "current": "2021-01-26",
+          "timestamp": "2021-01-27T01:23:13Z"
+        },
+        {
+          "element": "organization.businessTrading",
+          "previous": [
+            {
+              "summaryDate": "2021-01-01",
+              "currency": "GBP",
+              "summary": [
+                {
+                  "dataCoverage": {
+                    "description": "12 Months",
+                    "dnbCode": 19167
+                  },
+                  "paydexScore": 79,
+                  "threeMonthsPriorPaydexScore": 79,
+                  "paymentBehaviorDays": 1,
+                  "paymentBehaviorResult": {
+                    "description": "Beyond terms",
+                    "dnbCode": 1239
+                  },
+                  "totalExperiencesCount": 116,
+                  "totalExperiencesAmount": 302510160.94,
+                  "averageHighCreditAmount": 2607846.21,
+                  "maximumHighCreditAmount": 70000000.0,
+                  "maximumOwedAmount": 60000000.0,
+                  "maximumPastDueAmount": 6000000,
+                  "totalPastDueAmount": 9646790.06,
+                  "totalPastDueExperiencesCount": 33,
+                  "negativeExperiencesAmount": null,
+                  "negativePaymentsCount": null,
+                  "satisfactoryExperiencesAmount": 293417821.62,
+                  "satisfactoryExperiencesCount": 79,
+                  "slowExperiencesAmount": 9092339.31,
+                  "slowExperiencesCount": 37,
+                  "slowOrNegativePaymentsCount": 37,
+                  "slowOrNegativePaymentsPercentage": 31.9
+                }
+              ]
+            }
+          ],
+          "current": [
+            {
+              "summaryDate": "2021-01-01",
+              "currency": "GBP",
+              "summary": [
+                {
+                  "dataCoverage": {
+                    "description": "12 Months",
+                    "dnbCode": 19167
+                  },
+                  "paydexScore": 79,
+                  "threeMonthsPriorPaydexScore": 79,
+                  "paymentBehaviorDays": 1,
+                  "paymentBehaviorResult": {
+                    "description": "Beyond terms",
+                    "dnbCode": 1239
+                  },
+                  "totalExperiencesCount": 116,
+                  "totalExperiencesAmount": 302872977.82,
+                  "averageHighCreditAmount": 2610973.95,
+                  "maximumHighCreditAmount": 70000000.0,
+                  "maximumOwedAmount": 60000000.0,
+                  "maximumPastDueAmount": 6000000,
+                  "totalPastDueAmount": 9646790.06,
+                  "totalPastDueExperiencesCount": 33,
+                  "negativeExperiencesAmount": null,
+                  "negativePaymentsCount": null,
+                  "satisfactoryExperiencesAmount": 293780638.51,
+                  "satisfactoryExperiencesCount": 79,
+                  "slowExperiencesAmount": 9092339.31,
+                  "slowExperiencesCount": 37,
+                  "slowOrNegativePaymentsCount": 37,
+                  "slowOrNegativePaymentsPercentage": 31.9
+                }
+              ]
+            }
+          ],
+          "timestamp": "2021-01-27T02:34:56Z"
+        },
+        {
+          "element": "organization.dnbAssessment.delinquencyScore.scoreDate",
+          "previous": "2021-01-23",
+          "current": "2021-01-26",
+          "timestamp": "2021-01-27T01:23:13Z"
+        },
+        {
+          "element": "organization.dnbAssessment.failureScore.scoreDate",
+          "previous": "2021-01-23",
+          "current": "2021-01-26",
+          "timestamp": "2021-01-27T01:23:13Z"
+        }
+      ],
+      "deliveryTimeStamp": "2021-01-30T11:06:48.292Z"
+    }
+  ]
+}

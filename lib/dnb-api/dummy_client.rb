@@ -66,6 +66,18 @@ module Dnb
         file = File.read(get_path('monitoring_registration_remove.json'))
         JSON.parse file
       end
+
+      def monitoring_registration_pull(_reference)
+        check_connected
+        file = File.read(get_path('monitoring_registration_pull.json'))
+        JSON.parse file
+      end
+
+      def monitoring_registration_replay(_reference, _max_notifications, _replay_start_time)
+        check_connected
+        file = File.read(get_path('monitoring_registration_replay.json'))
+        JSON.parse file
+      end
       private
 
       def get_path(file)

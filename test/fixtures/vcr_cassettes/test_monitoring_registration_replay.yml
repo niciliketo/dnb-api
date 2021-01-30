@@ -1,0 +1,129 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://plus.dnb.com/v2/token
+    body:
+      encoding: UTF-8
+      string: '{ "grant_type" : "client_credentials" }'
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Authorization:
+      - Basic XXXXZTUwNjIwZDI0NGQ0OGExYTNjNTYxYjU0MzU0ODE3M2QxZDE3YTdkYzY0ODIxYmM0ZDYzZjRiYTMxMDc2ZTpkOTY0ZDdlMTkzNzI0NDM4OWVjNjBhYzQ5YzMyMTk1Y2YwMDU0NjY2M2M1NTQ2YjM4ZWVjMWRiZWJjNTY4Mjlh
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - ''
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate, private, s-maxage=0;
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - Deny
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '65'
+      Date:
+      - Sat, 30 Jan 2021 11:30:39 GMT
+      Connection:
+      - keep-alive
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=1
+      - origin; dur=319
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"XXXXJP2120x3153mi9DRIb6tl76l","expiresIn":86400}'
+  recorded_at: Sat, 30 Jan 2021 11:30:39 GMT
+- request:
+    method: get
+    uri: https://plus.dnb.com/v1/monitoring/registrations/MDOJO_CMPTCS_01/notifications/replay?maxNotifications=1&replayStartTimestamp=2021-01-23T11:30:39Z
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer 0dY2JP2120x3153mi9DRIb6tl76l
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate, private, s-maxage=0
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json
+      Expires:
+      - Thu, 07 Apr 2016 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Sat, 30 Jan 2021 11:30:40 GMT
+      Content-Length:
+      - '2648'
+      Connection:
+      - keep-alive
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=1
+      - origin; dur=378
+    body:
+      encoding: UTF-8
+      string: '{"transactionDetail":{"transactionID":"rrt-0daa1ee1e57942d41-b-eu-10745-52970140-11","transactionTimestamp":"2021-01-30T11:30:39.631Z","inLanguage":"en-US"},"inquiryDetail":{"reference":"MDOJO_CMPTCS_01"},"notifications":[{"type":"UPDATE","organization":{"duns":"213310873"},"elements":[{"element":"organization.dnbAssessment.standardRating.scoreDate","previous":"2021-01-23","current":"2021-01-26","timestamp":"2021-01-27T01:23:13Z"},{"element":"organization.dnbAssessment.creditLimitRecommendation.assessmentDate","previous":"2021-01-23","current":"2021-01-26","timestamp":"2021-01-27T01:23:13Z"},{"element":"organization.businessTrading","previous":[{"summaryDate":"2021-01-01","currency":"GBP","summary":[{"dataCoverage":{"description":"12
+        Months","dnbCode":19167},"paydexScore":79,"threeMonthsPriorPaydexScore":79,"paymentBehaviorDays":1,"paymentBehaviorResult":{"description":"Beyond
+        terms","dnbCode":1239},"totalExperiencesCount":116,"totalExperiencesAmount":3.0251016094E8,"averageHighCreditAmount":2607846.21,"maximumHighCreditAmount":7.0E7,"maximumOwedAmount":6.0E7,"maximumPastDueAmount":6000000,"totalPastDueAmount":9646790.06,"totalPastDueExperiencesCount":33,"negativeExperiencesAmount":null,"negativePaymentsCount":null,"satisfactoryExperiencesAmount":2.9341782162E8,"satisfactoryExperiencesCount":79,"slowExperiencesAmount":9092339.31,"slowExperiencesCount":37,"slowOrNegativePaymentsCount":37,"slowOrNegativePaymentsPercentage":31.9}]}],"current":[{"summaryDate":"2021-01-01","currency":"GBP","summary":[{"dataCoverage":{"description":"12
+        Months","dnbCode":19167},"paydexScore":79,"threeMonthsPriorPaydexScore":79,"paymentBehaviorDays":1,"paymentBehaviorResult":{"description":"Beyond
+        terms","dnbCode":1239},"totalExperiencesCount":116,"totalExperiencesAmount":3.0287297782E8,"averageHighCreditAmount":2610973.95,"maximumHighCreditAmount":7.0E7,"maximumOwedAmount":6.0E7,"maximumPastDueAmount":6000000,"totalPastDueAmount":9646790.06,"totalPastDueExperiencesCount":33,"negativeExperiencesAmount":null,"negativePaymentsCount":null,"satisfactoryExperiencesAmount":2.9378063851E8,"satisfactoryExperiencesCount":79,"slowExperiencesAmount":9092339.31,"slowExperiencesCount":37,"slowOrNegativePaymentsCount":37,"slowOrNegativePaymentsPercentage":31.9}]}],"timestamp":"2021-01-27T02:34:56Z"},{"element":"organization.dnbAssessment.delinquencyScore.scoreDate","previous":"2021-01-23","current":"2021-01-26","timestamp":"2021-01-27T01:23:13Z"},{"element":"organization.dnbAssessment.failureScore.scoreDate","previous":"2021-01-23","current":"2021-01-26","timestamp":"2021-01-27T01:23:13Z"}],"deliveryTimeStamp":"2021-01-30T11:06:48.292Z"}]}'
+  recorded_at: Sat, 30 Jan 2021 11:30:40 GMT
+recorded_with: VCR 6.0.0

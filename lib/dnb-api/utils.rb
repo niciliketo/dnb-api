@@ -16,8 +16,17 @@ module Dnb
         url
       end
 
-      def build_monitoring_registration_url(reference, duns)
-        "#{build_url(MONITORING_REGISTRATIONS_DETAILS_PATH)}/#{reference}/duns/#{duns}"
+      def build_monitoring_registration_url(reference, duns, action = nil)
+        tail =
+          case action
+          when :pull
+            '/notifications'
+          when :replay
+            '/notifications/replay'
+          else
+            "/duns/#{duns}"
+          end
+        "#{build_url(MONITORING_REGISTRATIONS_DETAILS_PATH)}/#{reference}#{tail}"
       end
     end
   end

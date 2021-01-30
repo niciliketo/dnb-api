@@ -81,8 +81,8 @@ module Dnb
       # via the replay API for 14 days. If notifications are not pulled for 4 days then
       # they will be removed and a re-seed will be necessary.
       # https://directplus.documentation.dnb.com/openAPI.html?apiID=monRegistrationPullAPI
-      def monitoring_registration_pull(reference, duns)
-        @proxy.monitoring_registration_pull(reference, duns)
+      def monitoring_registration_pull(reference)
+        @proxy.monitoring_registration_pull(reference)
       end
 
       ##
@@ -93,10 +93,13 @@ module Dnb
       # (if available). The replay API will return to the first notification after
       # timestamp indicated by the mandatory replayStartTimestamp parameter up to the
       # maxNotifications number if available.
+      # We will default to 1 week ago if no replay_start_time is specified
 
-      def monitoring_registration_replay(reference, duns)
-        @proxy.monitoring_registration_replay(reference, duns)
+      def monitoring_registration_replay(reference, max_notifications = 1,
+                                         replay_start_time = Time.now - (1 * 7 * 24 * 60 * 60))
+        @proxy.monitoring_registration_replay(reference, max_notifications, replay_start_time)
       end
+
       private
 
       def choose_proxy(environment)

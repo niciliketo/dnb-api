@@ -132,6 +132,28 @@ module Dnb
       end
     end
 
+    def test_monitoring_registration_pull
+      VCR.use_cassette('test_monitoring_registration_pull') do
+        client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :production)
+
+        client.connect
+        result = client.monitoring_registration_pull('MDOJO_CMPTCS_01')
+        assert_equal result['notifications'][0]['type'],
+                     'UPDATE', result
+      end
+    end
+
+    def test_monitoring_registration_replay
+      VCR.use_cassette('test_monitoring_registration_replay', match_requests_on: [:host, :path]) do
+        client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :production)
+
+        client.connect
+        result = client.monitoring_registration_replay('MDOJO_CMPTCS_01')
+        assert_equal result['notifications'][0]['type'],
+                     'UPDATE', result
+      end
+    end
+
     def test_can_assign_log_level
       Dnb::Api.logger.level = Logger::FATAL
       assert_equal 4, Dnb::Api.logger.level
