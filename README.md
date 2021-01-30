@@ -128,7 +128,10 @@ Get a list of registration lists
 ```ruby
 result = client.monitoring_registrations_list
 ```
-
+Get details of a registration
+```ruby
+result = client.monitoring_registration_details(<monitoring registration reference>)
+```
 ## Related Efforts
 
 - [dnb-direct-ruby](https://github.com/jihaia/dnb-direct-ruby) - Another ruby API wrapper for D&B Direct.

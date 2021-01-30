@@ -1,8 +1,8 @@
 {
   "transactionDetail": {
-    "transactionID": "rrt-0daa1ee1e57942d41-b-eu-10744-51374544-4",
-    "transactionTimestamp": "2021-01-26T17:30:25.857Z",
+    "transactionID": "rrt-097c1ff912c8673f5-a-eu-27002-51347286-3",
+    "transactionTimestamp": "2021-01-27T13:33:56.965Z",
     "inLanguage": "en-US"
   },
-  "messages": { "references": [] }
+  "messages": { "references": ["MDOJO_CMPTCS_01"] }
 }

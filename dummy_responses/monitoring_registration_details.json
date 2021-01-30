@@ -1,0 +1,29 @@
+{
+  "transactionDetail": {
+    "transactionID": "rrt-0daa1ee1e57942d41-b-eu-10745-51724582-2",
+    "transactionTimestamp": "2021-01-27T13:38:11.073Z",
+    "inLanguage": "en-US"
+  },
+  "inquiryDetail": { "reference": "MDOJO_CMPTCS_01" },
+  "messages": {
+    "notificationsSuppressed": false,
+    "registration": {
+      "reference": "MDOJO_CMPTCS_01",
+      "destination": { "type": "STP" },
+      "productId": "cmptcs",
+      "versionId": "v1",
+      "email": "admin@acme.com,info@acme.com,support@acme.com,test@dnb.com",
+      "seedData": true,
+      "fileTransferProfile": "ukcclass",
+      "description": "Market Dojo Jan 21 CMPTCS",
+      "createdDate": "2021-01-27 11:52:18",
+      "lastUpdatedDate": "2021-01-27T12:05:54Z",
+      "thresholds": [],
+      "orderReason": "6332",
+      "deliveryTrigger": "API_PULL",
+      "deliveryFrequency": "DAILY",
+      "notificationType": "UPDATE"
+    },
+    "state": "CURRENT"
+  }
+}

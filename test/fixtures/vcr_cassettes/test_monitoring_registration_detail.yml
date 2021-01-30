@@ -51,20 +51,20 @@ http_interactions:
       Content-Length:
       - '65'
       Date:
-      - Wed, 27 Jan 2021 13:33:56 GMT
+      - Wed, 27 Jan 2021 13:38:10 GMT
       Connection:
       - keep-alive
       Server-Timing:
       - cdn-cache; desc=MISS
-      - edge; dur=36
-      - origin; dur=96
+      - edge; dur=46
+      - origin; dur=146
     body:
       encoding: UTF-8
-      string: '{"access_token":"XXXX463LXH65EAlO4B11au731Q69","expiresIn":86400}'
-  recorded_at: Wed, 27 Jan 2021 13:33:56 GMT
+      string: '{"access_token":"XXXX417x1168sTr076FgW4H59E94","expiresIn":86400}'
+  recorded_at: Wed, 27 Jan 2021 13:38:10 GMT
 - request:
     method: get
-    uri: https://plus.dnb.com/v1/monitoring/registrations
+    uri: https://plus.dnb.com/v1/monitoring/registrations/MDOJO_CMPTCS_01
     body:
       encoding: US-ASCII
       string: ''
@@ -72,7 +72,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer XXXX463LXH65EAlO4B11au731Q69
+      - Bearer XXXX417x1168sTr076FgW4H59E94
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -109,17 +109,18 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Wed, 27 Jan 2021 13:33:57 GMT
+      - Wed, 27 Jan 2021 13:38:11 GMT
       Content-Length:
-      - '202'
+      - '781'
       Connection:
       - keep-alive
       Server-Timing:
       - cdn-cache; desc=MISS
-      - edge; dur=25
-      - origin; dur=480
+      - edge; dur=1
+      - origin; dur=484
     body:
       encoding: UTF-8
-      string: '{"transactionDetail":{"transactionID":"rrt-097c1ff912c8673f5-a-eu-27002-51347286-3","transactionTimestamp":"2021-01-27T13:33:56.965Z","inLanguage":"en-US"},"messages":{"references":["MDOJO_CMPTCS_01"]}}'
-  recorded_at: Wed, 27 Jan 2021 13:33:57 GMT
+      string: '{"transactionDetail":{"transactionID":"rrt-0daa1ee1e57942d41-b-eu-10745-51724582-2","transactionTimestamp":"2021-01-27T13:38:11.073Z","inLanguage":"en-US"},"inquiryDetail":{"reference":"MDOJO_CMPTCS_01"},"messages":{"notificationsSuppressed":false,"registration":{"reference":"MDOJO_CMPTCS_01","destination":{"type":"STP"},"productId":"cmptcs","versionId":"v1","email":"admin@acme.com,info@acme.com,support@acme.com,test@dnb.com","seedData":true,"fileTransferProfile":"ukcclass","description":"Market
+        Dojo Jan 21 CMPTCS","createdDate":"2021-01-27 11:52:18","lastUpdatedDate":"2021-01-27T12:05:54Z","thresholds":[],"orderReason":"6332","deliveryTrigger":"API_PULL","deliveryFrequency":"DAILY","notificationType":"UPDATE"},"state":"CURRENT"}}'
+  recorded_at: Wed, 27 Jan 2021 13:38:11 GMT
 recorded_with: VCR 6.0.0

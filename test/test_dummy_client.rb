@@ -78,8 +78,14 @@ module Dnb
       client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :dummy)
       client.connect
       result = client.monitoring_registrations_list
-      skip('Waiting for a sample response from D&B')
-      assert_equal 'kkk', result
+      assert_equal 'MDOJO_CMPTCS_01', result['messages']['references'][0]
+    end
+
+    def test_monitoring_registration_details
+      client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :dummy)
+      client.connect
+      result = client.monitoring_registration_details('12345')
+      assert_equal 'MDOJO_CMPTCS_01', result['messages']['registration']['reference']
     end
 
     def test_can_assign_log_level

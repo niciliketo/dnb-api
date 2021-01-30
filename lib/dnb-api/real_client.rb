@@ -77,6 +77,17 @@ module Dnb
         Dnb::Api.logger.debug("response: #{response}")
         JSON.parse response.body
       end
+
+      def monitoring_registration_details(reference)
+        url = build_url(MONITORING_REGISTRATIONS_DETAILS_PATH, reference)
+        Dnb::Api.logger.debug("Making request for monitoring_registration_details to #{url}")
+        response = Faraday.get do |req|
+          req.url url
+          req.headers = HEADERS.merge(auth_header)
+        end
+        Dnb::Api.logger.debug("response: #{response}")
+        JSON.parse response.body
+      end
     end
   end
 end
