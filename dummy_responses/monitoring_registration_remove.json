@@ -1,0 +1,11 @@
+{
+  "transactionDetail": {
+    "transactionID": "rrt-0daa1ee1e57942d41-b-eu-10744-52950701-50",
+    "transactionTimestamp": "2021-01-30T10:29:20.509Z",
+    "inLanguage": "en-US"
+  },
+  "information": {
+    "code": "21114",
+    "message": "Requested duns removed from registration  successfully."
+  }
+}

@@ -132,6 +132,14 @@ Get details of a registration
 ```ruby
 result = client.monitoring_registration_details(<monitoring registration reference>)
 ```
+Add DUNS to a registration
+```ruby
+result = client.monitoring_registration_add('<monitoring registration reference>', '<D-U-N-S>', '<customer_reference>')
+```
+Remove DUNS from a registration
+```ruby
+result = client.monitoring_registration_remove('<monitoring registration reference>', '<D-U-N-S>')
+```
 ## Related Efforts
 
 - [dnb-direct-ruby](https://github.com/jihaia/dnb-direct-ruby) - Another ruby API wrapper for D&B Direct.

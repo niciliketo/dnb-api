@@ -55,8 +55,8 @@ module Dnb
       # At any time after a registration is created,
       # you may add a single D-U-N-S Number to the registration.
       # https://directplus.documentation.dnb.com/openAPI.html?apiID=monAddSingleDunsToRegistration
-      def monitoring_registration_add(reference, duns)
-        @proxy.monitoring_registration_add(reference, duns)
+      def monitoring_registration_add(reference, duns, customer_reference = '12345')
+        @proxy.monitoring_registration_add(reference, duns, customer_reference)
       end
 
       ##

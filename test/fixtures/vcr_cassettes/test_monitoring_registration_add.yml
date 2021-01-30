@@ -1,0 +1,126 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://plus.dnb.com/v2/token
+    body:
+      encoding: UTF-8
+      string: '{ "grant_type" : "client_credentials" }'
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Authorization:
+      - Basic XXXXZTUwNjIwZDI0NGQ0OGExYTNjNTYxYjU0MzU0ODE3M2QxZDE3YTdkYzY0ODIxYmM0ZDYzZjRiYTMxMDc2ZTpkOTY0ZDdlMTkzNzI0NDM4OWVjNjBhYzQ5YzMyMTk1Y2YwMDU0NjY2M2M1NTQ2YjM4ZWVjMWRiZWJjNTY4Mjlh
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - ''
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate, private, s-maxage=0;
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - Deny
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '65'
+      Date:
+      - Sat, 30 Jan 2021 10:30:52 GMT
+      Connection:
+      - keep-alive
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=37
+      - origin; dur=118
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"XXXXOH2Vr9DI1B1tG160102Y6925","expiresIn":86400}'
+  recorded_at: Sat, 30 Jan 2021 10:30:52 GMT
+- request:
+    method: post
+    uri: https://plus.dnb.com/v1/monitoring/registrations/MDOJO_CMPTCS_01/duns/216832106
+    body:
+      encoding: UTF-8
+      string: '{"customerReference":"12345"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer XXXXH2Vr9DI1B1tG160102Y6925
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate, private, s-maxage=0
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json
+      Expires:
+      - Thu, 07 Apr 2016 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Sat, 30 Jan 2021 10:30:55 GMT
+      Content-Length:
+      - '250'
+      Connection:
+      - keep-alive
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=1
+      - origin; dur=3441
+    body:
+      encoding: UTF-8
+      string: '{"transactionDetail":{"transactionID":"rrt-0cba0815aed77662f-c-eu-7495-59212532-33","transactionTimestamp":"2021-01-30T10:30:52.078Z","inLanguage":"en-US"},"information":{"code":"21113","message":"Requested
+        duns added to registration successfully."}}'
+  recorded_at: Sat, 30 Jan 2021 10:30:55 GMT
+recorded_with: VCR 6.0.0

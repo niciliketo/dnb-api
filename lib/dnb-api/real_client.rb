@@ -34,7 +34,7 @@ module Dnb
 
       def criteria_search(params)
         url = build_url(CRITERIA_SEARCH_PATH)
-        Dnb::Api.logger.debug("Making request for criteria_search to #{url}  with params #{params}")
+        Dnb::Api.logger.debug("Making request for criteria_search to #{url} with params #{params}")
         response = Faraday.post do |req|
           req.url url
           req.headers = HEADERS.merge(auth_header)
@@ -82,6 +82,29 @@ module Dnb
         url = build_url(MONITORING_REGISTRATIONS_DETAILS_PATH, reference)
         Dnb::Api.logger.debug("Making request for monitoring_registration_details to #{url}")
         response = Faraday.get do |req|
+          req.url url
+          req.headers = HEADERS.merge(auth_header)
+        end
+        Dnb::Api.logger.debug("response: #{response}")
+        JSON.parse response.body
+      end
+
+      def monitoring_registration_add(reference, duns, customer_reference)
+        url = build_monitoring_registration_url(reference, duns)
+        Dnb::Api.logger.debug("Making request for monitoring_registration_add to #{url}")
+        response = Faraday.post do |req|
+          req.url url
+          req.headers = HEADERS.merge(auth_header)
+          req.body = { customerReference: customer_reference }.to_json
+        end
+        Dnb::Api.logger.debug("response: #{response}")
+        JSON.parse response.body
+      end
+
+      def monitoring_registration_remove(reference, duns)
+        url = build_monitoring_registration_url(reference, duns)
+        Dnb::Api.logger.debug("Making request for monitoring_registration_remove to #{url}")
+        response = Faraday.delete do |req|
           req.url url
           req.headers = HEADERS.merge(auth_header)
         end

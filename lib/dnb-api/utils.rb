@@ -15,6 +15,10 @@ module Dnb
         url += "?#{params}" unless params.nil?
         url
       end
+
+      def build_monitoring_registration_url(reference, duns)
+        "#{build_url(MONITORING_REGISTRATIONS_DETAILS_PATH)}/#{reference}/duns/#{duns}"
+      end
     end
   end
 end

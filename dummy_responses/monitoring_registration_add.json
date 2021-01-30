@@ -1,0 +1,11 @@
+{
+  "transactionDetail": {
+    "transactionID": "rrt-0cba0815aed77662f-c-eu-7494-59193722-12",
+    "transactionTimestamp": "2021-01-30T09:34:32.004Z",
+    "inLanguage": "en-US"
+  },
+  "information": {
+    "code": "21113",
+    "message": "Requested duns added to registration successfully."
+  }
+}

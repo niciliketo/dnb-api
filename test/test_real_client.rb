@@ -98,9 +98,6 @@ module Dnb
         client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :production)
         client.connect
         result = client.monitoring_registrations_list
-        File.open('dummy_responses/monitoring_registrations_list.json','w') do |f|
-          f.write(result.to_json)
-        end
         assert_equal 'MDOJO_CMPTCS_01', result['messages']['references'][0]
       end
     end
@@ -114,7 +111,26 @@ module Dnb
         assert_equal 'MDOJO_CMPTCS_01', result['messages']['registration']['reference']
       end
     end
-#        client = Dnb::Api::Client.new(api_key: 'd79e50620d244d48a1a3c561b543548173d1d17a7dc64821bc4d63f4ba31076e', secret: 'd964d7e1937244389ec60ac49c32195cf00546663c5546b38eec1dbebc56829a', environment: :production)
+
+    def test_monitoring_registration_add
+      VCR.use_cassette('test_monitoring_registration_add') do
+        client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :production)
+        client.connect
+        result = client.monitoring_registration_add('MDOJO_CMPTCS_01', '216832106')
+        assert_equal  result.dig('information', 'message'),
+                      'Requested duns added to registration successfully.', result
+      end
+    end
+
+    def test_monitoring_registration_remove
+      VCR.use_cassette('test_monitoring_registration_remove') do
+        client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :production)
+        client.connect
+        result = client.monitoring_registration_remove('MDOJO_CMPTCS_01', '216832106')
+        assert_equal  result.dig('information', 'message'),
+                      'Requested duns removed from registration  successfully.', result
+      end
+    end
 
     def test_can_assign_log_level
       Dnb::Api.logger.level = Logger::FATAL

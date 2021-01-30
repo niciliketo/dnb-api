@@ -88,6 +88,23 @@ module Dnb
       assert_equal 'MDOJO_CMPTCS_01', result['messages']['registration']['reference']
     end
 
+    def test_monitoring_registration_add
+      client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :dummy)
+      client.connect
+      result = client.monitoring_registration_add('MDOJO_CMPTCS_01', '216832106')
+      assert_equal  result.dig('information', 'message'),
+                    'Requested duns added to registration successfully.', result
+
+    end
+
+    def test_monitoring_registration_remove
+      client = Dnb::Api::Client.new(api_key: 'key', secret: 'secret', environment: :dummy)
+      client.connect
+      result = client.monitoring_registration_remove('MDOJO_CMPTCS_01', '216832106')
+      assert_equal  result.dig('information', 'message'),
+                    'Requested duns removed from registration  successfully.', result
+    end
+
     def test_can_assign_log_level
       Dnb::Api.logger.level = Logger::FATAL
       assert_equal 4, Dnb::Api.logger.level
